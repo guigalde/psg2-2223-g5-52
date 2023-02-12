@@ -14,6 +14,21 @@
     </parent>
     <name>petclinic</name>
 
+    <developers>
+        <developer>
+            <id>danarrarr</id>
+            <name>Daniel Arriaza Arriaza</name>
+            <email>daniel.arriaza.arriaza@gmail.com</email>
+            <url>https://github.com/darkgigi</url>
+            <organization>Universidad de Sevilla</organization>
+            <organizationUrl>https://www.us.es/</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Berlin</timezone>
+        </developer>
+    </developers>
+
     <properties>
 
         <!-- Generic properties -->
