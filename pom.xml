@@ -27,6 +27,18 @@
             </roles>
             <timezone>Europe/Berlin</timezone>
         </developer>
+        <developer>
+            <id>pedruiagu1</id>
+            <name>Pedro Jesus Ruiz Aguilar</name>
+            <email>cocode2002@gmail.com</email>
+            <url>https://github.com/PedroRuizAguilar</url>
+            <organization>Universidad de Sevilla</organization>
+            <organizationUrl>https://www.us.es/</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Berlin</timezone>
+        </developer>
     </developers>
 
     <properties>
