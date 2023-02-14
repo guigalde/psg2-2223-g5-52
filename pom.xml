@@ -39,6 +39,18 @@
             </roles>
             <timezone>Europe/Berlin</timezone>
         </developer>
+        <developer>
+            <id>josruiper4</id>
+            <name>Jose Manuel Ruiz Perez</name>
+            <email>josruiper4@alum.us.es</email>
+            <url>https://github.com/josruiper4</url>
+            <organization>Universidad de Sevilla</organization>
+            <organizationUrl>https://www.us.es/</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Berlin</timezone>
+        </developer>
     </developers>
 
     <properties>
