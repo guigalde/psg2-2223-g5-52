@@ -65,6 +65,18 @@
             </roles>
             <timezone>Europe/Berlin</timezone>
         </developer>
+        <developer>
+            <id>jessolort</id>
+            <name>Jesús Solís Ortega</name>
+            <email>jesussolisortega@gmail.com</email>
+            <url>https://github.com/JesusSolisOrtega</url>
+            <organization>Universidad de Sevilla</organization>
+            <organizationUrl>https://www.us.es/</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Berlin</timezone>
+        </developer>
     </developers>
 
     <properties>
