@@ -77,6 +77,18 @@
             </roles>
             <timezone>Europe/Berlin</timezone>
         </developer>
+        <developer>
+            <id>guigalde</id>
+            <name>Guillermo Galeano de Paz</name>
+            <email>guigalde@alum.us.es</email>
+            <url>https://github.com/guigalde</url>
+            <organization>Universidad de Sevilla</organization>
+            <organizationUrl>https://www.us.es/</organizationUrl>
+            <roles>
+                <role>Scrum master and developer</role>
+            </roles>
+            <timezone>Europe/Berlin</timezone>
+        </developer>
     </developers>
 
     <properties>
