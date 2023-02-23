@@ -48,7 +48,7 @@ import org.springframework.samples.petclinic.owner.Owner;
 @Table(name = "pets")
 public class Pet extends NamedEntity {
 
-	@Column(name = "birth_date")        
+	@Column(name = "birth_date")
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate birthDate;
 
@@ -108,5 +108,12 @@ public class Pet extends NamedEntity {
 		getVisitsInternal().add(visit);
 		visit.setPet(this);
 	}
+
+    public void onDeleteSetNull(){
+        this.birthDate=null;
+        this.owner=null;
+        this.type=null;
+        this.visits=null;
+    }
 
 }

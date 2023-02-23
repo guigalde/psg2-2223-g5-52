@@ -39,7 +39,7 @@ public class Visit extends BaseEntity {
 	/**
 	 * Holds value of property date.
 	 */
-	@Column(name = "visit_date")        
+	@Column(name = "visit_date")
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate date;
 
@@ -111,5 +111,11 @@ public class Visit extends BaseEntity {
 	public void setPet(Pet pet) {
 		this.pet = pet;
 	}
+
+    public void onDeleteSetNull(){
+        this.date=null;
+        this.pet=null;
+        this.description=null;
+    }
 
 }
