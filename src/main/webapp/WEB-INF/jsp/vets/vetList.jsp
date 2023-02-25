@@ -12,6 +12,7 @@
         <tr>
             <th>Name</th>
             <th>Specialties</th>
+            <th>Edit/Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -26,11 +27,22 @@
                     </c:forEach>
                     <c:if test="${vet.nrOfSpecialties == 0}">none</c:if>
                 </td>
+                <td> 
+                    <a href="/vets/${vet.id}/edit"> 
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>                            
+                    </a>       
+                </td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
 
+    <div class="col-sm-offset-2 col-sm-10">
+
+        <a class="btn btn-default" href='<spring:url value="/vets/new" htmlEscape="true"/>'>Add vet</a>
+    </div>
+
+    
     <table class="table-buttons">
         <tr>
             <td>

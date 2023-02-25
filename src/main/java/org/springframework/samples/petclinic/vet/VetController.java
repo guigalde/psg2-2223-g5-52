@@ -15,12 +15,23 @@
  */
 package org.springframework.samples.petclinic.vet;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Arrays;
 import java.util.Map;
+import java.util.Set;
+
+import javax.validation.Valid;
 
 /**
  * @author Juergen Hoeller
@@ -30,6 +41,8 @@ import java.util.Map;
  */
 @Controller
 public class VetController {
+
+	private final String VETS_FORM="/vets/createOrUpdateVetForm";
 
 	private final VetService vetService;
 
@@ -58,5 +71,57 @@ public class VetController {
 		vets.getVetList().addAll(this.vetService.findVets());
 		return vets;
 	}
+
+	@Transactional(readOnly = true)
+    @GetMapping("/vets/{id}/edit")
+    public ModelAndView editVet(@PathVariable int id){
+        Vet vet= vetService.getById(id).get();        
+        ModelAndView result=new ModelAndView(VETS_FORM);
+        result.addObject("vet", vet);
+		result.addObject("specialties", vetService.findSpecialties());               
+        return result;
+    }
+ 
+    @Transactional
+    @PostMapping("/vets/{id}/edit")
+    public ModelAndView saveVet(@PathVariable int id,@Valid Vet vet, BindingResult br, 
+				@RequestParam(value = "specialties", defaultValue = "") Set<Specialty> specialties){
+        ModelAndView result=null;
+        if(br.hasErrors()){
+            result=new ModelAndView(VETS_FORM,br.getModel());                    
+            return result;
+        }
+        Vet vetToBeUpdated=vetService.getById(id).get();
+        BeanUtils.copyProperties(vet,vetToBeUpdated,"id");
+		vetToBeUpdated.setSpecialtiesInternal(specialties);
+        vetService.save(vetToBeUpdated);
+		result = new ModelAndView("redirect:/vets");
+        return result;        
+    }
+
+    @Transactional(readOnly = true)
+    @GetMapping("/vets/new")
+    public ModelAndView createVet(){
+        Vet vet=new Vet();
+        ModelAndView result=new ModelAndView(VETS_FORM);        
+        result.addObject("vet", vet);
+        result.addObject("specialties", vetService.findSpecialties());        
+        return result;
+    }
+
+    @Transactional
+    @PostMapping("/vets/new")
+    public ModelAndView saveNewVet(@Valid Vet vet, BindingResult br,
+					@RequestParam(value = "specialties", defaultValue = "") Set<Specialty> specialties){
+        ModelAndView result=null;
+        if(br.hasErrors()){
+            result=new ModelAndView(VETS_FORM,br.getModel());                    
+            return result;
+        }
+		vet.setSpecialtiesInternal(specialties);
+        vetService.save(vet);
+        result = new ModelAndView("redirect:/vets");
+        return result;
+    }
 
 }
