@@ -59,6 +59,10 @@ public class PetService {
     public void deleteVisit(Visit visit) throws DataAccessException {
         visitRepository.delete(visit);
     }
+    @Transactional
+    public void deleteVisit(Integer id) throws DataAccessException {
+        visitRepository.deleteById(id);
+    }
 
 	@Transactional(readOnly = true)
 	public Pet findPetById(int id) throws DataAccessException {
@@ -78,8 +82,13 @@ public class PetService {
 	}
 
     @Transactional
-    public void deletePet(Pet visit) throws DataAccessException {
-        petRepository.delete(visit);
+    public void deletePet(Pet pet) throws DataAccessException {
+        petRepository.delete(pet);
+    }
+
+    @Transactional
+    public void deletePet(Integer id) throws DataAccessException {
+        petRepository.deleteById(id);
     }
 
 

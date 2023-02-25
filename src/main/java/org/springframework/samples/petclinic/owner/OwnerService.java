@@ -67,6 +67,9 @@ public class OwnerService {
 	}
     @Transactional
     public void deleteOwner(int id) {
+        Owner owner= ownerRepository.findById(id);
+        owner.onDeleteSetNull();
+        ownerRepository.save(owner);
         ownerRepository.deleteById(id);
     }
     @Transactional

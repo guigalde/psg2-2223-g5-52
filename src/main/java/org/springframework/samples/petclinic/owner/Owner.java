@@ -174,7 +174,9 @@ public class Owner extends Person {
         this.address=null;
         this.city=null;
         this.telephone=null;
-        this.pets=null;
+        for(Pet pet : getPetsInternal()){
+            pet.setOwner(null);
+        }
         this.user=null;
         this.firstName=null;
         this.lastName=null;

@@ -114,6 +114,7 @@ public class Pet extends NamedEntity {
         this.owner=null;
         this.type=null;
         this.visits=null;
+        this.setName(null);
     }
 
 }
