@@ -8,7 +8,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
+
 import org.assertj.core.util.Lists;
+import org.assertj.core.util.Sets;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,4 +75,10 @@ class VetControllerTests {
 				.andExpect(content().node(hasXPath("/vets/vetList[id=1]/id")));
 	}
 
+	@WithMockUser(value = "spring")
+	@Test
+	void testShowCreateOrUpdateForm() throws Exception {
+		mockMvc.perform(get("/vets/new")).andExpect(status().isOk()).andExpect(model().attributeExists("vet"))
+				.andExpect(view().name("/vets/createOrUpdateVetForm"));
+	}
 }
