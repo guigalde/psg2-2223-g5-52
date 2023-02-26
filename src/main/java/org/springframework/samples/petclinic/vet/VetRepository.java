@@ -22,7 +22,6 @@ import java.util.Set;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.Repository;
 
 /**
  * Repository class for <code>Vet</code> domain objects All method names are compliant
