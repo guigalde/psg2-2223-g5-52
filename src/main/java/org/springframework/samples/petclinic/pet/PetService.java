@@ -61,6 +61,9 @@ public class PetService {
     }
     @Transactional
     public void deleteVisit(Integer id) throws DataAccessException {
+        Visit visit=visitRepository.findById(id).get();
+        visit.onDeleteSetNull();
+        visitRepository.save(visit);
         visitRepository.deleteById(id);
     }
 

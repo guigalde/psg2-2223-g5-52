@@ -67,12 +67,18 @@
                         <tr>
                             <th>Visit Date</th>
                             <th>Description</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <c:forEach var="visit" items="${pet.visits}">
                             <tr>
                                 <td><petclinic:localDate date="${visit.date}" pattern="yyyy-MM-dd"/></td>
                                 <td><c:out value="${visit.description}"/></td>
+                                <td>
+                                <a href="/owners/${owner.id}/pets/${pet.id}/visits/${visit.id}/delete">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </a>
+                                </td>
                             </tr>
                         </c:forEach>
                         <tr>
