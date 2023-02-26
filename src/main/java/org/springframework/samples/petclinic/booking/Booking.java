@@ -22,13 +22,9 @@ import lombok.Setter;
 public class Booking extends BaseEntity {
 
     @DateTimeFormat(pattern = "yyyy/MM/dd")
-    @Future
-    @NotNull
     private LocalDate startDate;
     
     @DateTimeFormat(pattern = "yyyy/MM/dd")
-    @Future
-    @NotNull
     private LocalDate finishDate;
     
     @OneToOne
