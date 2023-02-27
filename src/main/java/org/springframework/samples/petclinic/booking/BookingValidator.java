@@ -16,13 +16,13 @@ public class BookingValidator implements Validator{
 		Booking bk = (Booking) obj;
 		if(bk.getStartDate()==null){
 			errors.rejectValue("startDate", NULLDATE, NULLDATE);
-			if(!bk.getFinishDate().isAfter(LocalDate.now()) && !(bk.getFinishDate()==null)){
+			if(!(bk.getFinishDate()==null) && !bk.getFinishDate().isAfter(LocalDate.now())){
 				errors.rejectValue("finishDate", PASTDATE, PASTDATE);
 			}
 		}
 		if(bk.getFinishDate()==null){
 			errors.rejectValue("finishDate", NULLDATE, NULLDATE);
-			if(!bk.getStartDate().isAfter(LocalDate.now())&& !(bk.getStartDate()==null)){
+			if(!(bk.getStartDate()==null) && !bk.getStartDate().isAfter(LocalDate.now())){
 				errors.rejectValue("startDate", PASTDATE, PASTDATE);
 			}
 		}
