@@ -13,12 +13,12 @@
                 <petclinic:inputField label="Last Name" name="lastName"/>
                 <div class="form-group">
                     <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</span>
-                    <label for="specialties">Specialties</label>
+                    <label for="specialties"><fmt:message key="specialities"/></label>
                     <span>&emsp;&emsp;</span>
                     <form:checkboxes items="${specialties}" path="specialties" itemValue="name" delimiter="&emsp;&emsp;"/>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit"><fmt:message key="submit"/></button>
         </form:form>
     </jsp:body>
 </petclinic:layout>

@@ -10,9 +10,9 @@
     <table id="vetsTable" class="table table-striped">
         <thead>
         <tr>
-            <th>Name</th>
-            <th>Specialties</th>
-            <th>Edit/Delete</th>
+            <th><fmt:message key="name"/></th>
+            <th><fmt:message key="specialities"/></th>
+            <th><fmt:message key="edit"/>/<fmt:message key="delete"/></th>
         </tr>
         </thead>
         <tbody>
@@ -25,7 +25,7 @@
                     <c:forEach var="specialty" items="${vet.specialties}">
                         <c:out value="${specialty.name} "/>
                     </c:forEach>
-                    <c:if test="${vet.nrOfSpecialties == 0}">none</c:if>
+                    <c:if test="${vet.nrOfSpecialties == 0}"><fmt:message key="none"/></c:if>
                 </td>
                 <td> 
                     <a href="/vets/${vet.id}/edit"> 
@@ -39,7 +39,7 @@
 
     <div class="col-sm-offset-2 col-sm-10">
 
-        <a class="btn btn-default" href='<spring:url value="/vets/new" htmlEscape="true"/>'>Add vet</a>
+        <a class="btn btn-default" href='<spring:url value="/vets/new" htmlEscape="true"/>'><fmt:message key="addVet"/></a>
     </div>
 
     

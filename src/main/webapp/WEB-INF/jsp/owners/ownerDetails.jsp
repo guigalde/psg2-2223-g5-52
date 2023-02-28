@@ -49,11 +49,11 @@
             <tr>
                 <td valign="top">
                     <dl class="dl-horizontal">
-                        <dt>Name</dt>
+                        <dt><fmt:message key="name"/></dt>
                         <dd><c:out value="${pet.name}"/></dd>
-                        <dt>Birth Date</dt>
+                        <dt><fmt:message key="birthdate"/></dt>
                         <dd><petclinic:localDate date="${pet.birthDate}" pattern="yyyy-MM-dd"/></dd>
-                        <dt>Type</dt>
+                        <dt><fmt:message key="type"/></dt>
                         <dd><c:out value="${pet.type.name}"/></dd>
                     </dl>
                 </td>
@@ -61,8 +61,8 @@
                     <table class="table-condensed">
                         <thead>
                         <tr>
-                            <th>Visit Date</th>
-                            <th>Description</th>
+                            <th><fmt:message key="visitDate"/></th>
+                            <th><fmt:message key="description"/></th>
                         </tr>
                         </thead>
                         <c:forEach var="visit" items="${pet.visits}">
@@ -77,14 +77,14 @@
                                     <spring:param name="ownerId" value="${owner.id}"/>
                                     <spring:param name="petId" value="${pet.id}"/>
                                 </spring:url>
-                                <a href="${fn:escapeXml(petUrl)}">Edit Pet</a>
+                                <a href="${fn:escapeXml(petUrl)}"><fmt:message key="editPet"/></a>
                             </td>
                             <td>
                                 <spring:url value="/owners/{ownerId}/pets/{petId}/visits/new" var="visitUrl">
                                     <spring:param name="ownerId" value="${owner.id}"/>
                                     <spring:param name="petId" value="${pet.id}"/>
                                 </spring:url>
-                                <a href="${fn:escapeXml(visitUrl)}">Add Visit</a>
+                                <a href="${fn:escapeXml(visitUrl)}"><fmt:message key="addVisit"/></a>
                             </td>
                             <td valign="top">
                                 <td>
@@ -92,7 +92,7 @@
                                         <spring:param name="ownerId" value="${owner.id}"/>
                                         <spring:param name="petId" value="${pet.id}"/>
                                     </spring:url>
-                                    <a class="btn btn-default" href="${fn:escapeXml(visitUrl)}">Add Booking</a> 
+                                    <a class="btn btn-default" href="${fn:escapeXml(visitUrl)}"><fmt:message key="addBooking"/></a> 
                                 </td>
                             </td>
                         </tr>
@@ -111,11 +111,11 @@
             <tr>
                 <td valign="top">
                     <dl class="dl-horizontal">
-                        <dt>Pet name</dt>
+                        <dt><fmt:message key="petName"/></dt>
                         <dd><c:out value="${booking.pet.name}"/></dd>
-                        <dt>Start Date</dt>
+                        <dt><fmt:message key="startDate"/></dt>
                         <dd><petclinic:localDate date="${booking.startDate}" pattern="yyyy-MM-dd"/></dd>
-                        <dt>Finish Date</dt>
+                        <dt><fmt:message key="finishDate"/></dt>
                         <dd><petclinic:localDate date="${booking.finishDate}" pattern="yyyy-MM-dd"/></dd>
                     </dl>
                 </td>
