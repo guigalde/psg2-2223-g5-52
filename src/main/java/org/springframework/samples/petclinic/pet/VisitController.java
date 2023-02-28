@@ -20,6 +20,7 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -92,8 +93,11 @@ public class VisitController {
 	}
 
     @GetMapping(value = "/owners/{ownerId}/pets/{petId}/visits/{visitId}/delete")
-    public String deleteVisit(@PathVariable("visitId") int visitId,@PathVariable("ownerId") int ownerId, ModelAndView model) {
-        petService.deleteVisit(visitId);
+    public String deleteVisit(@PathVariable("visitId") int visitId,
+                              @PathVariable("ownerId") int ownerId, ModelAndView model)
+        throws DuplicatedPetNameException {
+        Visit visit= petService.findVisitById(visitId);
+        petService.deleteVisit(visit);
         return "redirect:/owners/"+ ownerId ;
     }
 

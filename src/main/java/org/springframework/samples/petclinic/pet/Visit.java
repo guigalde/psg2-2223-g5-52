@@ -23,6 +23,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.samples.petclinic.model.BaseEntity;
@@ -113,9 +114,7 @@ public class Visit extends BaseEntity {
 
     public void onDeleteSetNull(){
         this.date=null;
-        this.pet.removeVisit(this);
         this.pet=null;
-        this.description=null;
     }
 
 }

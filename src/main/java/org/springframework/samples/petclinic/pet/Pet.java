@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -110,7 +111,7 @@ public class Pet extends NamedEntity {
 	}
 
     public void removeVisit(Visit visit) {
-        getVisitsInternal().remove(visit);
+        setVisitsInternal(getVisitsInternal().stream().filter(v-> v.getId()!= null && !v.getId().equals(visit.getId())).collect(Collectors.toSet()));
     }
 
     public void onDeleteSetNull(){
