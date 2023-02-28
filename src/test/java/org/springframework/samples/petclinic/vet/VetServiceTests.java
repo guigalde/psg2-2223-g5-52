@@ -73,5 +73,17 @@ class VetServiceTests {
 		assertThat(vet.getSpecialties().get(1).getName()).isEqualTo("surgery");
 	}
 
+	@Test
+	void shouldFindSpecialties() {
+		Collection<Specialty> specialties = this.vetService.findSpecialties();
+
+		Specialty specialty1 = EntityUtils.getById(specialties, Specialty.class, 1);
+		Specialty specialty2 = EntityUtils.getById(specialties, Specialty.class, 2);
+
+		assertThat(specialty1.getName()).isEqualTo("radiology");
+		assertThat(specialty2.getName()).isEqualTo("surgery");	
+	}
+
+
 
 }

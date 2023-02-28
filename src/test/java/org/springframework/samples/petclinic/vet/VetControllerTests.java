@@ -28,9 +28,6 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(controllers = VetController.class, excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = WebSecurityConfigurer.class), excludeAutoConfiguration = SecurityConfiguration.class)
 class VetControllerTests {
 
-	@Autowired
-	private VetController vetController;
-
 	@MockBean
 	private VetService clinicService;
 
@@ -70,4 +67,10 @@ class VetControllerTests {
 				.andExpect(content().node(hasXPath("/vets/vetList[id=1]/id")));
 	}
 
+	@WithMockUser(value = "spring")
+	@Test
+	void testShowCreateOrUpdateForm() throws Exception {
+		mockMvc.perform(get("/vets/new")).andExpect(status().isOk()).andExpect(model().attributeExists("vet"))
+				.andExpect(view().name("/vets/createOrUpdateVetForm"));
+	}
 }
