@@ -35,7 +35,7 @@ import org.springframework.samples.petclinic.model.BaseEntity;
  */
 public interface VisitRepository extends CrudRepository<Visit, Integer> {
 
-
+    Visit findById(int id) throws DataAccessException;
 
 	List<Visit> findByPetId(Integer petId);
 

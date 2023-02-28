@@ -127,6 +127,9 @@
                         <dd><petclinic:localDate date="${booking.startDate}" pattern="yyyy-MM-dd"/></dd>
                         <dt>Finish Date</dt>
                         <dd><petclinic:localDate date="${booking.finishDate}" pattern="yyyy-MM-dd"/></dd>
+                        <dd><a href="/owners/${owner.id}/pets/${booking.pet.id}/booking/${booking.id}/delete">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a></dd>
                     </dl>
                 </td>
                 

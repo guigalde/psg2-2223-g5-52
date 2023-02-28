@@ -109,6 +109,10 @@ public class Pet extends NamedEntity {
 		visit.setPet(this);
 	}
 
+    public void removeVisit(Visit visit) {
+        getVisitsInternal().remove(visit);
+    }
+
     public void onDeleteSetNull(){
         this.birthDate=null;
         this.owner=null;

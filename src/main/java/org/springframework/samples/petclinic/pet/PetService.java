@@ -59,9 +59,10 @@ public class PetService {
     public void deleteVisit(Visit visit) throws DataAccessException {
         visitRepository.delete(visit);
     }
-    @Transactional
-    public void deleteVisit(Integer id) throws DataAccessException {
-        Visit visit=visitRepository.findById(id).get();
+
+
+    public void deleteVisit(int id) throws DataAccessException {
+        Visit visit=visitRepository.findById(id);
         visit.onDeleteSetNull();
         visitRepository.save(visit);
         visitRepository.deleteById(id);

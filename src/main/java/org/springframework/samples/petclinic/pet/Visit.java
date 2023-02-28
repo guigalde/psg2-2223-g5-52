@@ -46,7 +46,6 @@ public class Visit extends BaseEntity {
 	/**
 	 * Holds value of property description.
 	 */
-	@NotEmpty
 	@Column(name = "description")
 	private String description;
 
@@ -114,6 +113,7 @@ public class Visit extends BaseEntity {
 
     public void onDeleteSetNull(){
         this.date=null;
+        this.pet.removeVisit(this);
         this.pet=null;
         this.description=null;
     }
