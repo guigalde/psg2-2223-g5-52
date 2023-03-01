@@ -3,10 +3,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@page pageEncoding="UTF-8"%>
 
 <petclinic:layout pageName="owners">
 
-    <h2>Owner Information</h2>
+    <h2>Información del propietario</h2>
 
 
     <table class="table table-striped">
@@ -45,7 +47,7 @@
     <br/>
     <br/>
     <br/>
-    <h2>Pets and Visits</h2>
+    <h2>Mascotas y visitas</h2>
 
     <table class="table table-striped">
         <c:forEach var="pet" items="${owner.pets}">

@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@page pageEncoding="UTF-8"%>
 
 <petclinic:layout pageName="vets">
     <jsp:body>
@@ -18,7 +20,7 @@
                     <form:checkboxes items="${specialties}" path="specialties" itemValue="name" delimiter="&emsp;&emsp;"/>
                 </div>
             </div>
-            <button type="submit"><fmt:message key="submit"/></button>
+            <button class="btn btn-default" type="submit"><fmt:message key="submit"/></button>
         </form:form>
     </jsp:body>
 </petclinic:layout>

@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@page pageEncoding="UTF-8"%>
 
 
 <petclinic:layout pageName="owners">
@@ -15,13 +17,11 @@
     </jsp:attribute>
     <jsp:body>
         <h2><c:if test="${visit['new']}"><fmt:message key="newF"/></c:if><fmt:message key="visit"/></h2>
-
-        <b>Pet</b>
         <table class="table table-striped">
             <thead>
             <tr>
                 <th><fmt:message key="name"/></th>
-                <th><fmt:message key="birthDate"/></th>
+                <th><fmt:message key="birthdate"/></th>
                 <th><fmt:message key="type"/></th>
                 <th><fmt:message key="owner"/></th>
             </tr>
@@ -43,7 +43,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="hidden" name="petId" value="${visit.pet.id}"/>
-                    <button class="btn btn-default" type="submit"><fmt:message key="AddVisit"/></button>
+                    <button class="btn btn-default" type="submit"><fmt:message key="addVisit"/></button>
                 </div>
             </div>
         </form:form>
