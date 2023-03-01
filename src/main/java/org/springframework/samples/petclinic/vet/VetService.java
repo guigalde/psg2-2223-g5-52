@@ -39,12 +39,20 @@ public class VetService {
 	@Autowired
 	public VetService(VetRepository vetRepository) {
 		this.vetRepository = vetRepository;
-	}		
+	}
 
-	@Transactional(readOnly = true)	
+	@Transactional(readOnly = true)
 	public Collection<Vet> findVets() throws DataAccessException {
 		return vetRepository.findAll();
-	}	
+	}
+    @Transactional
+    public void deleteVet(Vet vet) throws DataAccessException {
+        vetRepository.delete(vet);
+    }
+    @Transactional
+    public void deleteVet(Integer id) throws DataAccessException {
+        vetRepository.deleteById(id);
+    }
 
 	@Transactional(readOnly = true)
     public Optional<Vet> getById(int id) {

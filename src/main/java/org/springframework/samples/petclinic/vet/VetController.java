@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -74,16 +75,16 @@ public class VetController {
 	@Transactional(readOnly = true)
     @GetMapping("/vets/{id}/edit")
     public ModelAndView editVet(@PathVariable int id){
-        Vet vet= vetService.getById(id).get();        
+        Vet vet= vetService.getById(id).get();
         ModelAndView result=new ModelAndView(VETS_FORM);
         result.addObject("vet", vet);
-		result.addObject("specialties", vetService.findSpecialties());               
+		result.addObject("specialties", vetService.findSpecialties());
         return result;
     }
- 
+
     @Transactional
     @PostMapping("/vets/{id}/edit")
-    public ModelAndView saveVet(@PathVariable int id,@Valid Vet vet, BindingResult br, 
+    public ModelAndView saveVet(@PathVariable int id,@Valid Vet vet, BindingResult br,
 				@RequestParam(value = "specialties", defaultValue = "") Set<Specialty> specialties){
         ModelAndView result=null;
         if(br.hasErrors()){
@@ -96,16 +97,16 @@ public class VetController {
 		vetToBeUpdated.setSpecialtiesInternal(specialties);
         vetService.save(vetToBeUpdated);
 		result = new ModelAndView("redirect:/vets");
-        return result;        
+        return result;
     }
 
     @Transactional(readOnly = true)
     @GetMapping("/vets/new")
     public ModelAndView createVet(){
         Vet vet=new Vet();
-        ModelAndView result=new ModelAndView(VETS_FORM);        
+        ModelAndView result=new ModelAndView(VETS_FORM);
         result.addObject("vet", vet);
-        result.addObject("specialties", vetService.findSpecialties());        
+        result.addObject("specialties", vetService.findSpecialties());
         return result;
     }
 
@@ -115,6 +116,7 @@ public class VetController {
 					@RequestParam(value = "specialties", defaultValue = "") Set<Specialty> specialties){
         ModelAndView result=null;
         if(br.hasErrors()){
+            result=new ModelAndView(VETS_FORM,br.getModel());
             result=new ModelAndView(VETS_FORM,br.getModel());  
             result.addObject("specialties", vetService.findSpecialties());                  
             return result;
@@ -123,6 +125,12 @@ public class VetController {
         vetService.save(vet);
         result = new ModelAndView("redirect:/vets");
         return result;
+    }
+
+    @GetMapping(value = "/vets/{vetId}/delete")
+    public String deleteOwner(@PathVariable("vetId") int vetId, ModelAndView model) {
+        vetService.deleteVet(vetId);
+        return "redirect:/vets" ;
     }
 
 }

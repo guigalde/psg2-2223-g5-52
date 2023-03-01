@@ -30,7 +30,10 @@
                 <td> 
                     <a href="/vets/${vet.id}/edit"> 
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>                            
-                    </a>       
+                    </a>
+                    <a href="/vets/${vet.id}/delete">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </a>
                 </td>
             </tr>
         </c:forEach>

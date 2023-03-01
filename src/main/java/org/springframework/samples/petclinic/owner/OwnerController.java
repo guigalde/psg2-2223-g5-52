@@ -71,7 +71,7 @@ public class OwnerController {
 		else {
 			//creating owner, user and authorities
 			this.ownerService.saveOwner(owner);
-			
+
 			return "redirect:/owners/" + owner.getId();
 		}
 	}
@@ -140,5 +140,11 @@ public class OwnerController {
 		mav.addObject(this.ownerService.findOwnerById(ownerId));
 		return mav;
 	}
+
+    @GetMapping(value = "/owners/{ownerId}/delete")
+    public String deleteOwner(@PathVariable("ownerId") int ownerId, ModelAndView model) {
+        ownerService.deleteOwner(ownerId);
+        return "redirect:/owners" ;
+    }
 
 }
