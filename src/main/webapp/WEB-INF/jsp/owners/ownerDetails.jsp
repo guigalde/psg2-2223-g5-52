@@ -113,7 +113,7 @@
         </c:forEach>
     </table>
 
-    <h2>Bookings</h2>
+    <h2><fmt:message key="bookings"/></h2>
 
     <table class="table table-striped">
         <c:forEach var="booking" items="${owner.bookings}">

@@ -9,8 +9,8 @@
         <form:form modelAttribute="vet"
                    class="form-horizontal">
             <div class="form-group has-feedback">
-                <petclinic:inputField label="First Name" name="firstName"/>
-                <petclinic:inputField label="Last Name" name="lastName"/>
+                <petclinic:inputField label="Nombre" name="firstName"/>
+                <petclinic:inputField label="Apellidos" name="lastName"/>
                 <div class="form-group">
                     <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</span>
                     <label for="specialties"><fmt:message key="specialities"/></label>

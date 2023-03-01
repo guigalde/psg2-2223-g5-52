@@ -49,7 +49,7 @@
         <c:if test="${!pet['new']}">
             <spring:url value="delete" var="deleteUrl">
             </spring:url>
-            <a href="${fn:escapeXml(deleteUrl)}" class="btn btn-default">Delete Pet</a>
+            <a href="${fn:escapeXml(deleteUrl)}" class="btn btn-default"><fmt:message key="deletePet"/></a>
         </c:if>
     </jsp:body>
 </petclinic:layout>
