@@ -89,6 +89,7 @@ public class VetController {
         ModelAndView result=null;
         if(br.hasErrors()){
             result=new ModelAndView(VETS_FORM,br.getModel());
+            result.addObject("specialties", vetService.findSpecialties());                   
             return result;
         }
         Vet vetToBeUpdated=vetService.getById(id).get();
@@ -116,6 +117,8 @@ public class VetController {
         ModelAndView result=null;
         if(br.hasErrors()){
             result=new ModelAndView(VETS_FORM,br.getModel());
+            result=new ModelAndView(VETS_FORM,br.getModel());  
+            result.addObject("specialties", vetService.findSpecialties());                  
             return result;
         }
 		vet.setSpecialtiesInternal(specialties);
