@@ -25,17 +25,12 @@ Curso 2022 – 2023
 | José Manuel Ruiz Pérez | josruiper4@alum.us.es |
 | Jesús Solís Ortega | jesussolisortega@gmail.com |
 
-</center>
+
 
 ## **Índice**
-1. Control de versiones
-2. Introducción
-3. Contenido
-a) Coding standards
-b) Políticas de Mensajes de Commit
-c) Estructura de repositorios y ramas por defecto
-d) Estrategia de ramas
-e) Políticas de versionado
+ 1. Control de versiones
+ 2. Introducción
+ 3. Contenido<br>    a) Coding standards<br>    b) Políticas de Mensajes de Commit<br>    c) Estructura de repositorios y ramas por defecto <br>    d) Estrategia de ramas <br>    e) Políticas de versionado
 4. Conclusiones
 5. Bibliografía
 
