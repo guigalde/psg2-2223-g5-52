@@ -23,6 +23,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.samples.petclinic.model.BaseEntity;
@@ -39,14 +40,13 @@ public class Visit extends BaseEntity {
 	/**
 	 * Holds value of property date.
 	 */
-	@Column(name = "visit_date")        
+	@Column(name = "visit_date")
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate date;
 
 	/**
 	 * Holds value of property description.
 	 */
-	@NotEmpty
 	@Column(name = "description")
 	private String description;
 
@@ -111,5 +111,10 @@ public class Visit extends BaseEntity {
 	public void setPet(Pet pet) {
 		this.pet = pet;
 	}
+
+    public void onDeleteSetNull(){
+        this.date=null;
+        this.pet=null;
+    }
 
 }

@@ -2,6 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
 
 <petclinic:layout pageName="owners">
@@ -46,6 +47,9 @@
             </div>
         </form:form>
         <c:if test="${!pet['new']}">
+            <spring:url value="delete" var="deleteUrl">
+            </spring:url>
+            <a href="${fn:escapeXml(deleteUrl)}" class="btn btn-default">Delete Pet</a>
         </c:if>
     </jsp:body>
 </petclinic:layout>

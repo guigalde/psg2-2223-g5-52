@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Juergen Hoeller
@@ -64,7 +65,7 @@ public class PetController {
 	public Owner findOwner(@PathVariable("ownerId") int ownerId) {
 		return this.ownerService.findOwnerById(ownerId);
 	}
-        
+
         /*@ModelAttribute("pet")
 	public Pet findPet(@PathVariable("petId") Integer petId) {
             Pet result=null;
@@ -74,7 +75,7 @@ public class PetController {
                     result=new Pet();
             return result;
 	}*/
-                
+
 	@InitBinder("owner")
 	public void initOwnerBinder(WebDataBinder dataBinder) {
 		dataBinder.setDisallowedFields("id");
@@ -94,7 +95,7 @@ public class PetController {
 	}
 
 	@PostMapping(value = "/pets/new")
-	public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result, ModelMap model) {		
+	public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result, ModelMap model) {
 		if (result.hasErrors()) {
 			model.put("pet", pet);
 			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
@@ -136,9 +137,9 @@ public class PetController {
 		}
 		else {
                         Pet petToUpdate=this.petService.findPetById(petId);
-			BeanUtils.copyProperties(pet, petToUpdate, "id","owner","visits");                                                                                  
-                    try {                    
-                        this.petService.savePet(petToUpdate);                    
+			BeanUtils.copyProperties(pet, petToUpdate, "id","owner","visits");
+                    try {
+                        this.petService.savePet(petToUpdate);
                     } catch (DuplicatedPetNameException ex) {
                         result.rejectValue("name", "duplicate", "already exists");
                         return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
@@ -146,5 +147,12 @@ public class PetController {
 			return "redirect:/owners/{ownerId}";
 		}
 	}
+    @GetMapping(value = "/pets/{petId}/delete")
+    public String deleteOwner(@PathVariable("petId") int petId, ModelAndView model) {
+            Pet pet= petService.findPetById(petId);
+            pet.onDeleteSetNull();
+        petService.deletePet(petId);
+        return "redirect:/owners/{ownerId}" ;
+    }
 
 }

@@ -71,7 +71,7 @@ public class Owner extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
 	private Set<Pet> pets;
-	
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="owner")
 	private List<Booking> bookings;
 	//
@@ -101,7 +101,7 @@ public class Owner extends Person {
 		getPetsInternal().add(pet);
 		pet.setOwner(this);
 	}
-	
+
 	public boolean removePet(Pet pet) {
 		return getPetsInternal().remove(pet);
 	}
@@ -114,7 +114,7 @@ public class Owner extends Person {
 	public Pet getPet(String name) {
 		return getPet(name, false);
 	}
-	
+
 	public Pet getPetwithIdDifferent(String name,Integer id) {
 		name = name.toLowerCase();
 		for (Pet pet : getPetsInternal()) {
@@ -145,6 +145,18 @@ public class Owner extends Person {
 		}
 		return null;
 	}
+
+    public void onDeleteSetNull(){
+        this.address=null;
+        this.city=null;
+        this.telephone=null;
+        for(Pet pet : getPetsInternal()){
+            pet.setOwner(null);
+        }
+        this.user=null;
+        this.firstName=null;
+        this.lastName=null;
+    }
 
 	@Override
 	public String toString() {

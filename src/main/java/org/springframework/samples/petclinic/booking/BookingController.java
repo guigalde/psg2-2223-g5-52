@@ -21,23 +21,23 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class BookingController {
-    
+
     private BookingService bookingService;
 
     private PetService petService;
 
     private OwnerService ownerService;
 
-    
+
     private String CREATION_BOOKING_FROM = "bookings/createBookingForm";
-    
+
     @Autowired
     public BookingController(BookingService bookingService, OwnerService ownerService, PetService petService) {
         this.bookingService = bookingService;
         this.ownerService = ownerService;
         this.petService = petService;
     }
-    
+
     @ModelAttribute("booking")
     public Booking getBooking(@PathVariable("petId") Integer petId, @PathVariable("ownerId") Integer ownerId) {
         Pet pet = petService.findPetById(petId);
@@ -57,7 +57,7 @@ public class BookingController {
     @GetMapping(value = "/owners/{ownerId}/pets/{petId}/booking/new")
     public ModelAndView initCreateBookingForm(@PathVariable("petId") int petId, @PathVariable("ownerId") int ownerId) {
         ModelAndView res = new ModelAndView(CREATION_BOOKING_FROM);
-        return res;   
+        return res;
     }
 
 
@@ -75,5 +75,11 @@ public class BookingController {
             return res;
         }
     }
+    @GetMapping(value = "/owners/{ownerId}/pets/{petId}/booking/{bookingId}/delete")
+    public String deleteBooking(@PathVariable("bookingId") int bookingId,@PathVariable("ownerId") int ownerId, ModelAndView model) {
+        bookingService.deleteBooking(bookingId);
+        return "redirect:/owners/"+ ownerId ;
+    }
+
 
 }

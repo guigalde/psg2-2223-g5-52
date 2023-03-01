@@ -36,7 +36,11 @@
     <spring:url value="{ownerId}/pets/new" var="addUrl">
         <spring:param name="ownerId" value="${owner.id}"/>
     </spring:url>
-    <a href="${fn:escapeXml(addUrl)}" class="btn btn-default"><fmt:message key="addPet"/></a>
+    <a href="${fn:escapeXml(addUrl)}" class="btn btn-default"><fmt:message key="addNewPet"/></a>
+    <spring:url value="{ownerId}/delete" var="deleteUrl">
+        <spring:param name="ownerId" value="${owner.id}"/>
+    </spring:url>
+    <a href="${fn:escapeXml(deleteUrl)}" class="btn btn-default"><fmt:message key="deleteOwner"/></a>
 
     <br/>
     <br/>
@@ -63,12 +67,18 @@
                         <tr>
                             <th><fmt:message key="visitDate"/></th>
                             <th><fmt:message key="description"/></th>
+                            <th><fmt:message key="delete"/></th>
                         </tr>
                         </thead>
                         <c:forEach var="visit" items="${pet.visits}">
                             <tr>
                                 <td><petclinic:localDate date="${visit.date}" pattern="yyyy-MM-dd"/></td>
                                 <td><c:out value="${visit.description}"/></td>
+                                <td>
+                                <a href="/owners/${owner.id}/pets/${pet.id}/visits/${visit.id}/delete">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </a>
+                                </td>
                             </tr>
                         </c:forEach>
                         <tr>
@@ -117,6 +127,9 @@
                         <dd><petclinic:localDate date="${booking.startDate}" pattern="yyyy-MM-dd"/></dd>
                         <dt><fmt:message key="finishDate"/></dt>
                         <dd><petclinic:localDate date="${booking.finishDate}" pattern="yyyy-MM-dd"/></dd>
+                        <dd><a href="/owners/${owner.id}/pets/${booking.pet.id}/booking/${booking.id}/delete">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a></dd>
                     </dl>
                 </td>
                 
