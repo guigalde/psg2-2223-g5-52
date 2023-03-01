@@ -9,16 +9,16 @@
         <form:form modelAttribute="vet"
                    class="form-horizontal">
             <div class="form-group has-feedback">
-                <petclinic:inputField label="First Name" name="firstName"/>
-                <petclinic:inputField label="Last Name" name="lastName"/>
+                <petclinic:inputField label="Nombre" name="firstName"/>
+                <petclinic:inputField label="Apellidos" name="lastName"/>
                 <div class="form-group">
                     <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</span>
-                    <label for="specialties">Specialties</label>
+                    <label for="specialties"><fmt:message key="specialities"/></label>
                     <span>&emsp;&emsp;</span>
                     <form:checkboxes items="${specialties}" path="specialties" itemValue="name" delimiter="&emsp;&emsp;"/>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit"><fmt:message key="submit"/></button>
         </form:form>
     </jsp:body>
 </petclinic:layout>

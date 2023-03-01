@@ -15,14 +15,14 @@
     </jsp:attribute>
     <jsp:body>
         <h2>
-            <c:if test="${pet['new']}">New </c:if> Pet
+            <c:if test="${pet['new']}"><fmt:message key="newF"/></c:if><fmt:message key="pet"/>
         </h2>
         <form:form modelAttribute="pet"
                    class="form-horizontal">
             <input type="hidden" name="id" value="${pet.id}"/>
             <div class="form-group has-feedback">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Owner</label>
+                    <label class="col-sm-2 control-label"><fmt:message key="owner"/></label>
                     <div class="col-sm-10">
                         <c:out value="${pet.owner.firstName} ${pet.owner.lastName}"/>
                     </div>
@@ -37,10 +37,10 @@
                 <div class="col-sm-offset-2 col-sm-10">
                     <c:choose>
                         <c:when test="${pet['new']}">
-                            <button class="btn btn-default" type="submit">Add Pet</button>
+                            <button class="btn btn-default" type="submit"><fmt:message key="addPet"/></button>
                         </c:when>
                         <c:otherwise>
-                            <button class="btn btn-default" type="submit">Update Pet</button>
+                            <button class="btn btn-default" type="submit"><fmt:message key="updatePet"/></button>
                         </c:otherwise>
                     </c:choose>
                 </div>
@@ -49,7 +49,7 @@
         <c:if test="${!pet['new']}">
             <spring:url value="delete" var="deleteUrl">
             </spring:url>
-            <a href="${fn:escapeXml(deleteUrl)}" class="btn btn-default">Delete Pet</a>
+            <a href="${fn:escapeXml(deleteUrl)}" class="btn btn-default"><fmt:message key="deletePet"/></a>
         </c:if>
     </jsp:body>
 </petclinic:layout>

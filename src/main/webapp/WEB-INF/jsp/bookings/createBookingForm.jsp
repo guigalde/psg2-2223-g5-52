@@ -19,14 +19,14 @@
         </script>
     </jsp:attribute>
     <jsp:body>
-        <h2>New Booking</h2>
+        <h2><fmt:message key="newBooking"/></h2>
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Birth Date</th>
-                <th>Type</th>
-                <th>Owner</th>
+                <th><fmt:message key="name"/></th>
+                <th><fmt:message key="birthDate"/></th>
+                <th><fmt:message key="type"/></th>
+                <th><fmt:message key="owner"/></th>
             </tr>
             </thead>
             <tr>
@@ -39,15 +39,15 @@
 
         <form:form modelAttribute="booking" class="form-horizontal">
             <div class="form-group has-feedback">
-                <petclinic:inputField label="Start date" name="startDate"/>
-                <petclinic:inputField label="Finish date" name="finishDate"/>
+                <petclinic:inputField label="Fecha de inicio" name="startDate"/>
+                <petclinic:inputField label="Fecha de fin" name="finishDate"/>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="hidden" name="pet_Id" value="${booking.pet.id}"/>
                     <input type="hidden" name="owner_Id" value="${booking.owner.id}"/>
-                    <button class="btn btn-default" type="submit">Add Booking</button>
+                    <button class="btn btn-default" type="submit"><fmt:message key="addBooking"/></button>
                 </div>
             </div>
         </form:form>
