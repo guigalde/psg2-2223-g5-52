@@ -34,9 +34,13 @@ import javax.validation.constraints.NotEmpty;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 import org.springframework.core.style.ToStringCreator;
+import org.springframework.samples.petclinic.booking.Booking;
 import org.springframework.samples.petclinic.model.Person;
 import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.samples.petclinic.user.User;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Simple JavaBean domain object representing an owner.
@@ -47,6 +51,8 @@ import org.springframework.samples.petclinic.user.User;
  * @author Michael Isvy
  */
 @Entity
+@Getter
+@Setter
 @Table(name = "owners")
 public class Owner extends Person {
 
@@ -65,44 +71,14 @@ public class Owner extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
 	private Set<Pet> pets;
-	
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="owner")
+	private List<Booking> bookings;
 	//
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "username", referencedColumnName = "username")
 	private User user;
 	//
-	
-	public String getAddress() {
-		return this.address;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getCity() {
-		return this.city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getTelephone() {
-		return this.telephone;
-	}
-
-	public void setTelephone(String telephone) {
-		this.telephone = telephone;
-	}
 
 	protected Set<Pet> getPetsInternal() {
 		if (this.pets == null) {
@@ -125,7 +101,7 @@ public class Owner extends Person {
 		getPetsInternal().add(pet);
 		pet.setOwner(this);
 	}
-	
+
 	public boolean removePet(Pet pet) {
 		return getPetsInternal().remove(pet);
 	}
@@ -138,7 +114,7 @@ public class Owner extends Person {
 	public Pet getPet(String name) {
 		return getPet(name, false);
 	}
-	
+
 	public Pet getPetwithIdDifferent(String name,Integer id) {
 		name = name.toLowerCase();
 		for (Pet pet : getPetsInternal()) {
@@ -169,6 +145,18 @@ public class Owner extends Person {
 		}
 		return null;
 	}
+
+    public void onDeleteSetNull(){
+        this.address=null;
+        this.city=null;
+        this.telephone=null;
+        for(Pet pet : getPetsInternal()){
+            pet.setOwner(null);
+        }
+        this.user=null;
+        this.firstName=null;
+        this.lastName=null;
+    }
 
 	@Override
 	public String toString() {

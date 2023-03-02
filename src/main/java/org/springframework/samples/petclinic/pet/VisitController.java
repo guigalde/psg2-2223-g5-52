@@ -20,6 +20,7 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Juergen Hoeller
@@ -89,5 +91,14 @@ public class VisitController {
 		model.put("visits", this.petService.findPetById(petId).getVisits());
 		return "visitList";
 	}
+
+    @GetMapping(value = "/owners/{ownerId}/pets/{petId}/visits/{visitId}/delete")
+    public String deleteVisit(@PathVariable("visitId") int visitId,
+                              @PathVariable("ownerId") int ownerId, ModelAndView model)
+        throws DuplicatedPetNameException {
+        Visit visit= petService.findVisitById(visitId);
+        petService.deleteVisit(visit);
+        return "redirect:/owners/"+ ownerId ;
+    }
 
 }

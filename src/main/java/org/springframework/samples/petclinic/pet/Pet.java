@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -48,7 +49,7 @@ import org.springframework.samples.petclinic.owner.Owner;
 @Table(name = "pets")
 public class Pet extends NamedEntity {
 
-	@Column(name = "birth_date")        
+	@Column(name = "birth_date")
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate birthDate;
 
@@ -108,5 +109,17 @@ public class Pet extends NamedEntity {
 		getVisitsInternal().add(visit);
 		visit.setPet(this);
 	}
+
+    public void removeVisit(Visit visit) {
+        setVisitsInternal(getVisitsInternal().stream().filter(v-> v.getId()!= null && !v.getId().equals(visit.getId())).collect(Collectors.toSet()));
+    }
+
+    public void onDeleteSetNull(){
+        this.birthDate=null;
+        this.owner=null;
+        this.type=null;
+        this.visits=null;
+        this.setName(null);
+    }
 
 }
