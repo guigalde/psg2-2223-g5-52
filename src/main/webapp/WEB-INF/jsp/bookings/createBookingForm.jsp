@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@page pageEncoding="UTF-8"%>
 
 
 <petclinic:layout pageName="bookings">
@@ -24,7 +26,7 @@
             <thead>
             <tr>
                 <th><fmt:message key="name"/></th>
-                <th><fmt:message key="birthDate"/></th>
+                <th><fmt:message key="birthdate"/></th>
                 <th><fmt:message key="type"/></th>
                 <th><fmt:message key="owner"/></th>
             </tr>
