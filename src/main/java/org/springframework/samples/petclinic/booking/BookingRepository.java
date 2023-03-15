@@ -12,4 +12,7 @@ public interface BookingRepository extends CrudRepository<Booking, Integer>{
     
     @Query("SELECT booking FROM Booking booking WHERE booking.owner.id = :id")
     public List<Booking> findOwnerBookingsById(@Param("id") Integer id);
+
+    @Query("SELECT booking FROM Booking booking WHERE booking.pet.id = :id")
+    public List<Booking> findPetBookingsById(@Param("id") Integer id);
 }
