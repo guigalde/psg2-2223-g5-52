@@ -3,10 +3,10 @@ package org.springframework.samples.petclinic.causes;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import ch.qos.logback.core.net.server.Client;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,7 +22,10 @@ public class Donation {
 
     private Double budget;
 
-    private Client client;
+    private Owner owner;
+
+    @ManyToOne
+    private Cause cause;
 
 
 }
