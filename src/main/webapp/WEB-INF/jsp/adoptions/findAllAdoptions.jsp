@@ -2,6 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
 <%@page pageEncoding="UTF-8"%>
 <style>
@@ -19,10 +20,13 @@
         <c:forEach items="${adoptions}" var="adoption">
             <tr>
                 <td>
-                    <c:out value="${adoption.publishingOwner.firstName} ${adoption.publishingOwner.lastName}"/>
+                    <spring:url value="/adoptions/{adoptionId}" var="adoptionUrl">
+                        <spring:param name="adoptionId" value="${adoption.id}"/>
+                    </spring:url>
+                    <a href="${fn:escapeXml(adoptionUrl)}"><c:out value="${adoption.publishingOwner.firstName} ${adoption.publishingOwner.lastName}"/></a>
                 </td>
                 <td>
-                    <c:out value="${adoption.publishingOwner.city} ${adoption.publishingOwner.city}"/>
+                    <c:out value="${adoption.publishingOwner.city}"/>
                 </td>
                 <td>
                     <dl class="dl-horizontal">

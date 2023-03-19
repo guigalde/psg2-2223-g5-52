@@ -30,6 +30,10 @@ public class AdoptionService {
     public List<Adoption> getAll(){
         return adoptionRepository.findAll();
     }
+    @Transactional(readOnly = true)
+    public Adoption getAdoptionbyId(Integer id){
+        return adoptionRepository.findAdoptionbyId(id);
+    }
 
     @Transactional
     public void deleteAdoption(Integer id) throws DataAccessException {
