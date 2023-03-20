@@ -3,8 +3,10 @@ package org.springframework.samples.petclinic.booking;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.Pet;
+import org.springframework.samples.petclinic.booking.exceptions.ConcurrentBookingsForPet;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.stereotype.Controller;
@@ -63,13 +65,19 @@ public class BookingController {
 
     @Transactional
     @PostMapping("/owners/{ownerId}/pets/{petId}/booking/new")
-    public ModelAndView saveBooking(@Valid Booking booking, BindingResult br, RedirectAttributes attributes){
+    public ModelAndView saveBooking(@Valid Booking booking, BindingResult br, RedirectAttributes attributes) throws DataAccessException, ConcurrentBookingsForPet{
         ModelAndView res = new ModelAndView();
         if(br.hasErrors()){
             res= new ModelAndView(CREATION_BOOKING_FROM, br.getModel());
             return res;
         }else{
-            bookingService.saveBooking(booking);
+            try{
+                bookingService.saveBooking(booking);
+            }catch(ConcurrentBookingsForPet exception){
+                res = new ModelAndView("redirect:/owners/{ownerId}/pets/{petId}/booking/new");
+                attributes.addFlashAttribute("message", "Booked dates overlap existing bookings for this pet");
+                return res;
+            }
             res = new ModelAndView("redirect:/owners/{ownerId}");
             attributes.addFlashAttribute("message", "The booking was created successfully");
             return res;
