@@ -45,11 +45,12 @@ public class BookingService {
         LocalDate finishDate = booking.getFinishDate();
         List<Booking> bookingsOfPet=bookingRepository.findPetBookingsById(booking.getPet().getId());
         for(Booking bk:bookingsOfPet){
-            if(startDate.isAfter(bk.getStartDate()) && startDate.isBefore(bk.getFinishDate())){
+            if((startDate.isAfter(bk.getStartDate()) || startDate.isEqual(bk.getStartDate())) && startDate.isBefore(bk.getFinishDate())){
                 throw new ConcurrentBookingsForPet();
-            }else if(finishDate.isAfter(bk.getStartDate()) && finishDate.isBefore(bk.getFinishDate())){
+            }else if(finishDate.isAfter(bk.getStartDate()) && (finishDate.isBefore(bk.getFinishDate())|| finishDate.isEqual(bk.getFinishDate()))){
                 throw new ConcurrentBookingsForPet();
-            }else if(startDate.isBefore(bk.getStartDate())&&finishDate.isAfter(bk.getFinishDate())){
+            }else if((startDate.isBefore(bk.getStartDate()) || startDate.isEqual(bk.getStartDate()))
+                && (finishDate.isAfter(bk.getFinishDate()) || finishDate.isEqual(bk.getFinishDate()))){
                 throw new ConcurrentBookingsForPet();
             }
         }
