@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.samples.petclinic.model.BaseEntity;
+import org.springframework.samples.petclinic.owner.Owner;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Donation {
+public class Donation extends BaseEntity{
 
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     private LocalDate dateOfDonation;

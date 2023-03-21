@@ -14,6 +14,8 @@ import lombok.Setter;
 @Setter
 public class Cause extends BaseEntity{
 
+    private String name;
+
     private String description;
 
     private Double budgetTarget;
