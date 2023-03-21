@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.samples.petclinic.owner.Owner;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,6 +23,7 @@ public class Donation {
 
     private Double budget;
 
+    @ManyToOne
     private Owner owner;
 
     @ManyToOne

@@ -8,18 +8,6 @@
 
 
 <petclinic:layout pageName="donations">
-    <jsp:attribute name="customScript">
-        <script>
-            $(function () {
-                $("#startDate").datepicker({dateFormat: 'yy/mm/dd'});
-            });
-        </script>
-        <script>
-            $(function () {
-                $("#finishDate").datepicker({dateFormat: 'yy/mm/dd'});
-            });
-        </script>
-    </jsp:attribute>
     <jsp:body>
         <h2><fmt:message key="newBooking"/></h2>
         <table class="table table-striped">
