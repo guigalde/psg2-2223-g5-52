@@ -24,6 +24,7 @@ public class Donation extends BaseEntity{
 
     private Double budget;
 
+    @ManyToOne
     private Owner owner;
 
     @ManyToOne

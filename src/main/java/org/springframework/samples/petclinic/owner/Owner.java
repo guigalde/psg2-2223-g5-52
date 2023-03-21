@@ -35,6 +35,7 @@ import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.samples.petclinic.booking.Booking;
+import org.springframework.samples.petclinic.causes.Donation;
 import org.springframework.samples.petclinic.model.Person;
 import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.samples.petclinic.user.User;
@@ -74,6 +75,9 @@ public class Owner extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="owner")
 	private List<Booking> bookings;
+	//
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="owner")
+	private List<Donation> donations;
 	//
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "username", referencedColumnName = "username")

@@ -32,10 +32,10 @@
                     <c:out value="${causeMap.key.budgetTarget}"/>
                 </td>
                 <td>
-                    <a href="/causes/${causeMap.key.id}/details"><fmt:message key="causeDetails"/></a> 
+                    <a href="/cause/${causeMap.key.id}/details"><fmt:message key="causeDetails"/></a> 
                 </td>
                 <td>
-                    <a href="/causes/${causeMap.key.id}/donation/new"><fmt:message key="doADonation"/></a> 
+                    <a href="/cause/${causeMap.key.id}/donation/new"><fmt:message key="doADonation"/></a> 
                 </td>
                        
             </tr>

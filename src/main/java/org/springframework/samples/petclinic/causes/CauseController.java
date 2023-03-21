@@ -25,7 +25,7 @@ public class CauseController {
         this.donationService = donationService;
     }
 
-    @GetMapping("/causes")
+    @GetMapping("/cause")
     public ModelAndView listCauses(){
         List<Cause> listCauses = causeService.getAllCauses();
         ModelAndView view = new ModelAndView("causes/listCauses");
@@ -40,13 +40,14 @@ public class CauseController {
         return view;
     }
 
-    @GetMapping("/causes/{causeId}/details")
+    @GetMapping("/cause/{causeId}/details")
     public ModelAndView causeDetails(@PathVariable("causeId") Integer causeId){
     
         ModelAndView view = new ModelAndView("causes/causeDetails");
 
         Cause causa = causeService.getCauseById(causeId);
-        view.addObject("causa", causa);
+        //List<Donation> donations = donationService.getAllById
+        view.addObject("cause", causa);
 
         return view;
 
