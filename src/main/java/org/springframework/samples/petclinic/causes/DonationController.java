@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
@@ -22,44 +23,44 @@ public class DonationController {
 
     private DonationService donationService;
 
+    private CauseService causeService;
+
+    private OwnerService ownerService;
+
     private String CREATE_DONATION_FORM = "donations/createDonationForm";
 
     @Autowired
-    public DonationController(DonationService donationService) {
+    public DonationController(DonationService donationService, OwnerService ownerService, CauseService causeService) {
         this.donationService = donationService;
+        this.ownerService = ownerService;
+        this.causeService = causeService;
     }
 
     @Transactional(readOnly = true)
-    @GetMapping(value = "/causes/{causeId}/donation/new")
+    @GetMapping(value = "/cause/{causeId}/donation/new")
     public ModelAndView initCreateDonationForm(@PathVariable("causeId") int causeId) {
         ModelAndView res = new ModelAndView(CREATE_DONATION_FORM);
-        LocalDate dateDonation = LocalDate.now();
-        res.addObject("dateOfDonation", dateDonation);
+        Donation donacion = new Donation();
+        res.addObject("listOwners", ownerService.findAllOwners() );
+        res.addObject("donation", donacion);
         return res;
     }
 
 
     @Transactional
-    @PostMapping("/causes/{causeId}/donation/new")
-    public ModelAndView saveDonation(@Valid Donation donation, BindingResult br, RedirectAttributes attributes){
+    @PostMapping("/cause/{causeId}/donation/new")
+    public String saveDonation(@Valid Donation donation, @PathVariable("causeId") int causeId, BindingResult br, RedirectAttributes attributes){
         ModelAndView res = new ModelAndView();
         if(br.hasErrors()){
             res= new ModelAndView(CREATE_DONATION_FORM, br.getModel());
-            return res;
-        }else{
+            return CREATE_DONATION_FORM;
+        }else{     
+            donation.setDateOfDonation(LocalDate.now());
+            donation.setCause(causeService.getCauseById(causeId));
             donationService.saveDonation(donation);
-            res = new ModelAndView("redirect:/causes/{causeId}");
+
             attributes.addFlashAttribute("message", "The donation was created successfully");
-            return res;
+            return "redirect:/cause/"+causeId+"/details";
         }
     }
-
-    @GetMapping("/donations/{causeId}")
-    public ModelAndView listDonationsByCauseId(@PathVariable("causeId") int causeId){
-        List<Donation> listDonations = donationService.getCauseDonationsById(causeId);
-        ModelAndView view = new ModelAndView("donationss/listDonationsByCauseId");
-        view.addObject("donationsCauseId", listDonations);
-        return view;
-    }
-    
 }

@@ -24,8 +24,8 @@ public class DonationService {
 	}
 
     @Transactional(readOnly = true)
-    public List<Donation> getCauseDonationsById(Integer donationId) {
-        return donationRepository.findDonationCauseById(donationId);
+    public List<Donation> getCauseDonationsById(Integer causeId) {
+        return donationRepository.findDonationCauseById(causeId);
     }
     
 }

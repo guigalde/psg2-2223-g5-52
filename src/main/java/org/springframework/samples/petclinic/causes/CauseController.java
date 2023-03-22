@@ -46,8 +46,9 @@ public class CauseController {
         ModelAndView view = new ModelAndView("causes/causeDetails");
 
         Cause causa = causeService.getCauseById(causeId);
-        //List<Donation> donations = donationService.getAllById
+        List<Donation> donations = donationService.getCauseDonationsById(causeId);
         view.addObject("cause", causa);
+        view.addObject("donoList", donations);
 
         return view;
 

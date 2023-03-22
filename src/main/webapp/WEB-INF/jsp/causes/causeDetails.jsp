@@ -40,7 +40,7 @@
                 <c:out value="${dono.budget}"/>
             </td>
             <td>
-                <c:out value="${dono.owner}"/>
+                <c:out value="${dono.owner.firstName} "/> <c:out value="${dono.owner.lastName}"/>
             </td>                  
         </tr>
     </c:forEach>
@@ -50,7 +50,7 @@
 
 <a class="btn btn-default" href="/cause"><fmt:message key="return"/></a> 
 <td>
-    <a class="btn btn-default" href="/cause/${causeMap.key.id}/donation/new"><fmt:message key="doADonation"/></a> 
+    <a class="btn btn-default" href="/cause/${cause.id}/donation/new"><fmt:message key="doADonation"/></a> 
 </td>
 
 </petclinic:layout>

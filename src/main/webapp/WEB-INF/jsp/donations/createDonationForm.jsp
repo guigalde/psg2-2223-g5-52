@@ -7,22 +7,22 @@
 <%@page pageEncoding="UTF-8"%>
 
 
-<petclinic:layout pageName="donations">
-    <jsp:body>
+<petclinic:layout pageName="newDonation">
         <h2><fmt:message key="newDonation"/></h2>
-        <form:form modelAttribute="owner" class="form-horizontal" id="add-owner-form">
-        <div class="form-group has-feedback">
-            <petclinic:inputField label="Fecha de Donacion" name="dateOfDonation" readonly="true" value="${dateOfDonation}"/>
+    
+        <form:form modelAttribute="donation" class="form-horizontal">
+            <div class="form-group has-feedback">
+          
             <petclinic:inputField label="Cantidad" name="budget"/>
-            <petclinic:inputField label="Dirección" name="address"/>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button class="btn btn-default" type="submit"><fmt:message key="doADonation"/></button>
+            <petclinic:selectField name="owner" label="Propietario" names="${listOwners}" size="1"/>
             </div>
-        </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-default" type="submit"><fmt:message key="doADonation"/></button>
+                </div>
+            </div>
     </form:form>
 
-    </jsp:body>
 
 </petclinic:layout>

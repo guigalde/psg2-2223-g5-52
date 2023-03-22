@@ -67,7 +67,6 @@ INSERT INTO visits(id,pet_id,visit_date,description) VALUES (4, 7, '2013-01-04',
 INSERT INTO cause(id,name, description, budget_target, organization_in_charge) VALUES (1,'Causa de prueba','Descripcion causa uno',500.0,'PETA');
 INSERT INTO cause(id,name, description, budget_target, organization_in_charge) VALUES (2,'Otra Causa de prueba','Descripcion causa dos',300.0,'PETA 2, electric boogalo');
 
-
 INSERT INTO donation(id, date_of_donation, budget, owner_id, cause_id) VALUES (1,'2023-02-21',20.0,1,1);
 INSERT INTO donation(id, date_of_donation, budget, owner_id, cause_id) VALUES (2,'2023-02-22',15.5,2,1);
 INSERT INTO donation(id, date_of_donation, budget, owner_id, cause_id) VALUES (3,'2023-02-23',10.9,2,2);
