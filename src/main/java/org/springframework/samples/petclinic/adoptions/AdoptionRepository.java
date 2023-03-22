@@ -15,4 +15,7 @@ public interface AdoptionRepository extends CrudRepository<Adoption,Integer>{
 
     @Query("SELECT a FROM Adoption a WHERE a.publishingOwner.id = :ownerId AND a.pet.id = :petId AND a.accepted = false")
     public Adoption findPendingAdoptionById(@Param("ownerId") Integer ownerId, @Param("petId") Integer petId);
+
+    @Query("Select a from Adoption a where a.accepted=false and a.id= :adoptionId")
+    public Adoption findAdoptionbyId(@Param("adoptionId") Integer id);
 }
