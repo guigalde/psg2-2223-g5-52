@@ -1,8 +1,12 @@
 package org.springframework.samples.petclinic.causes;
 
+import java.time.LocalDate;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +33,8 @@ public class DonationController {
     @GetMapping(value = "/causes/{causeId}/donation/new")
     public ModelAndView initCreateDonationForm(@PathVariable("causeId") int causeId) {
         ModelAndView res = new ModelAndView(CREATE_DONATION_FORM);
+        LocalDate dateDonation = LocalDate.now();
+        res.addObject("dateOfDonation", dateDonation);
         return res;
     }
 
@@ -46,6 +52,14 @@ public class DonationController {
             attributes.addFlashAttribute("message", "The donation was created successfully");
             return res;
         }
+    }
+
+    @GetMapping("/donations/{causeId}")
+    public ModelAndView listDonationsByCauseId(@PathVariable("causeId") int causeId){
+        List<Donation> listDonations = donationService.getCauseDonationsById(causeId);
+        ModelAndView view = new ModelAndView("donationss/listDonationsByCauseId");
+        view.addObject("donationsCauseId", listDonations);
+        return view;
     }
     
 }

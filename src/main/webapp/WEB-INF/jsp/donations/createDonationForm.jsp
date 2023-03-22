@@ -9,38 +9,19 @@
 
 <petclinic:layout pageName="donations">
     <jsp:body>
-        <h2><fmt:message key="newBooking"/></h2>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th><fmt:message key="name"/></th>
-                <th><fmt:message key="birthdate"/></th>
-                <th><fmt:message key="type"/></th>
-                <th><fmt:message key="owner"/></th>
-            </tr>
-            </thead>
-            <tr>
-                <td><c:out value="${booking.pet.name}"/></td>
-                <td><petclinic:localDate date="${booking.pet.birthDate}" pattern="yyyy/MM/dd"/></td>
-                <td><c:out value="${booking.pet.type.name}"/></td>
-                <td><c:out value="${booking.owner.firstName} ${booking.owner.lastName}"/></td>
-            </tr>
-        </table>
-
-        <form:form modelAttribute="booking" class="form-horizontal">
-            <div class="form-group has-feedback">
-                <petclinic:inputField label="Fecha de inicio" name="startDate"/>
-                <petclinic:inputField label="Fecha de fin" name="finishDate"/>
+        <h2><fmt:message key="newDonation"/></h2>
+        <form:form modelAttribute="owner" class="form-horizontal" id="add-owner-form">
+        <div class="form-group has-feedback">
+            <petclinic:inputField label="Fecha de Donacion" name="dateOfDonation" readonly="true" value="${dateOfDonation}"/>
+            <petclinic:inputField label="Cantidad" name="budget"/>
+            <petclinic:inputField label="Dirección" name="address"/>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-default" type="submit"><fmt:message key="doADonation"/></button>
             </div>
-
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <input type="hidden" name="pet_Id" value="${booking.pet.id}"/>
-                    <input type="hidden" name="owner_Id" value="${booking.owner.id}"/>
-                    <button class="btn btn-default" type="submit"><fmt:message key="addBooking"/></button>
-                </div>
-            </div>
-        </form:form>
+        </div>
+    </form:form>
 
     </jsp:body>
 
