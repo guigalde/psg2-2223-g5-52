@@ -43,12 +43,12 @@ In the retrospective meeting, the team has a discussion about those results.
 | M Day 7         |      -         |       -        |       -         |       -         |        -         |       -         |
 | X Day 8 (15/03) |:neutral_face:  |       :smiley: |       -         |        :smiley:|       :smiley:    |         -       |
 | J Day 9         |      -         |       -        |       -         |        :smiley: |        -         |       -         |
-| V Day 10        |      -         |       -        |       -         |        -        |        -         |       -         |
+| V Day 10        |      -         |       😐       |       -         |        -        |        -         |       -         |
 | S Day 11        |     -          |       -        |       -         |        -        |        -         |       -         |
 | D Day 12        |      :smiley:  |       -        |       -         |        -       |       :smiley:   |        -         |
 | L Day 13        |      -         |       -        |       -         |       -        |          -        |       -         |
 | M Day 14        |      -         |       -        |       -         |       -        |          -        |       -         |
-| X Day 15 (22/03)|      :smiley:  |               |                |       :smiley: |                  |                |
+| X Day 15 (22/03)|      :smiley:  |       😟        |                |       :smiley: |                  |                |
 | J Day 16        |               |               |                |               |                |                |
 | V Day 17        |               |               |                |               |                |                |
 | S Day 18        |               |               |                |               |                |                |
