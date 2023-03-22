@@ -47,14 +47,14 @@ In the retrospective meeting, the team has a discussion about those results.
 | S Day 11        |     -          |       -        |       -         |        -        |        -         |       -         |
 | D Day 12        |      :smiley:  |       -        |       -         |        -       |       :smiley:   |        -         |
 | L Day 13        |      -         |       -        |       -         |       -        |          -        |      :smiley:   |
-| M Day 14        |      -         |       -        |       -         |       -        |          -        |       -         |
-| X Day 15 (22/03)|      :smiley:  |       😟        |                |       :smiley: |       :smiley:   |                |
+| M Day 14        |      -         |       -        |       -         |       -        |          -        |      :smiley:   |
+| X Day 15 (22/03)|      :smiley:  |       😟        |                |       :smiley: |       :smiley:   |      :smiley:    |
 | J Day 16        |               |               |                |               |                |                |
 | V Day 17        |               |               |                |               |                |                |
 | S Day 18        |               |               |                |               |                |                |
-| D Day 19        |               |               |                |               |                |    :smiley:    |
+| D Day 19        |               |               |                |               |                |                |
 | L Day 20        |               |               |                |               |                |                |
-| M Day 21        |               |               |                |               |                |    :smiley:    |
-| X Day 22 (29/03)|               |               |                |               |                |    :smiley:    |
+| M Day 21        |               |               |                |               |                |                |
+| X Day 22 (29/03)|               |               |                |               |                |                |
 | J Day 23        |               |               |                |               |                |                |
 
