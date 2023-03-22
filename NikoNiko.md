@@ -34,7 +34,7 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
-| X Day 1 (8/03)  |     :smiley:   |        :smiley: |   :smiley:     |    :smiley:    |       -         |         -        |
+| X Day 1 (8/03)  |     :smiley:   |        :smiley: |   :smiley:     |    :smiley:    |      :smiley:   |         -        |
 | J Day 2         |      -         |      -         |       -         |       -         |       -         |        -        |
 | V Day 3         |       -        |       -        |       -         |       -         |        -        |        -        |
 | S Day 4         |        -       |       -       |        -        |       -         |         -        |        -        |
@@ -48,7 +48,7 @@ In the retrospective meeting, the team has a discussion about those results.
 | D Day 12        |      :smiley:  |       -        |       -         |        -       |       :smiley:   |        -         |
 | L Day 13        |      -         |       -        |       -         |       -        |          -        |       -         |
 | M Day 14        |      -         |       -        |       -         |       -        |          -        |       -         |
-| X Day 15 (22/03)|      :smiley:  |       😟        |                |       :smiley: |                  |                |
+| X Day 15 (22/03)|      :smiley:  |       😟        |                |       :smiley: |       :smiley:   |                |
 | J Day 16        |               |               |                |               |                |                |
 | V Day 17        |               |               |                |               |                |                |
 | S Day 18        |               |               |                |               |                |                |
