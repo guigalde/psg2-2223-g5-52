@@ -5,6 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.booking.Booking;
+import org.springframework.samples.petclinic.booking.BookingService;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.Pet;
@@ -34,6 +36,8 @@ public class AdoptionController {
 
     private AdoptionApplicationService adoptionApplicationService;
 
+    private BookingService bookingService;
+
     protected final String ALL_ADOPTIONS="adoptions/findAllAdoptions";
     protected final String CREATION_ADOPTION_FORM = "adoptions/createAdoptionForm";
     protected final String ADOPTION_INFO = "adoptions/adoptionDetails";
@@ -41,12 +45,13 @@ public class AdoptionController {
 
     @Autowired
     public AdoptionController(AdoptionService adoptionService, OwnerService ownerService, PetService petService, 
-    AdoptionApplicationService adoptionApplicationService, UserService userService){
+    AdoptionApplicationService adoptionApplicationService, UserService userService, BookingService bookingService){
         this.adoptionService=adoptionService;
         this.ownerService = ownerService;
         this.petService = petService;
         this.adoptionApplicationService = adoptionApplicationService;
         this.userService=userService;
+        this.bookingService = bookingService;
     }
 
     @ModelAttribute("loggedOwner")
@@ -90,7 +95,7 @@ public class AdoptionController {
     RedirectAttributes attributes){
         Adoption existingAdoption = adoptionService.getPendingdoptionsById(ownerId,petId);
         if(existingAdoption != null) {
-            ModelAndView result = new ModelAndView("redirect:/adoptions");
+            ModelAndView result = new ModelAndView("redirect:/adoptions/find");
             attributes.addFlashAttribute("message", "You have already put on adoption your pet");
             return result;
         }
@@ -180,11 +185,17 @@ public class AdoptionController {
         Owner publisher = ownerService.findOwnerById(ownerId);
         Owner applicationOwner = ownerService.findOwnerById(newOwnerId);
         Adoption adoption = adoptionService.getAdoptionbyId(adoptionId);
+        List<Booking> bookings = bookingService.getOwnerBookingsById(ownerId);
         publisher.removePet(pet);
         applicationOwner.addPet(pet);
         adoption.setAccepted(true);
         ownerService.saveOwner(applicationOwner);
         ownerService.saveOwner(publisher);
+        for(Booking booking : bookings) {
+            if(booking.getPet().getId().equals(petId)){
+                bookingService.deleteBooking(booking);
+            }
+        }
         adoptionService.saveAdoption(adoption);
         return new ModelAndView("redirect:/adoptions/find");
     }
