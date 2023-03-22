@@ -34,14 +34,14 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
-| X Day 1 (8/03)  |     :smiley:   |        :smiley: |   :smiley:     |    :smiley:    |      :smiley:   |         -        |
+| X Day 1 (8/03)  |     :smiley:   |        :smiley: |   :smiley:     |    :smiley:    |      :smiley:   |         :smiley: |
 | J Day 2         |      -         |      -         |       -         |       -         |       -         |        -        |
 | V Day 3         |       -        |       -        |       -         |       -         |        -        |        -        |
 | S Day 4         |        -       |       -       |        -        |       -         |         -        |        -        |
 | D Day 5         |        -       |       -        |   :smiley:     |       -         |         -        |        -        |
 | L Day 6         |        -       |       -        |       -         |       -         |        -         |       -         |
 | M Day 7         |      -         |       -        |       -         |       -         |        -         |       -         |
-| X Day 8 (15/03) |:neutral_face:  |       :smiley: |       -         |        :smiley:|       :smiley:    |         -       |
+| X Day 8 (15/03) |:neutral_face:  |       :smiley: |       -         |        :smiley:|       :smiley:    |      :smiley:   |
 | J Day 9         |      -         |       -        |       -         |        :smiley: |        -         |       -         |
 | V Day 10        |      -         |       😐       |       -         |        -        |        -         |       -         |
 | S Day 11        |     -          |       -        |       -         |        -        |        -         |       -         |
@@ -52,9 +52,9 @@ In the retrospective meeting, the team has a discussion about those results.
 | J Day 16        |               |               |                |               |                |                |
 | V Day 17        |               |               |                |               |                |                |
 | S Day 18        |               |               |                |               |                |                |
-| D Day 19        |               |               |                |               |                |                |
+| D Day 19        |               |               |                |               |                |    :smiley:    |
 | L Day 20        |               |               |                |               |                |                |
-| M Day 21        |               |               |                |               |                |                |
-| X Day 22 (29/03)|               |               |                |               |                |                |
+| M Day 21        |               |               |                |               |                |    :smiley:    |
+| X Day 22 (29/03)|               |               |                |               |                |    :smiley:    |
 | J Day 23        |               |               |                |               |                |                |
 
