@@ -46,7 +46,7 @@ In the retrospective meeting, the team has a discussion about those results.
 | V Day 10        |      -         |       😐       |       -         |        -        |        -         |       -         |
 | S Day 11        |     -          |       -        |       -         |        -        |        -         |       -         |
 | D Day 12        |      :smiley:  |       -        |       -         |        -       |       :smiley:   |        -         |
-| L Day 13        |      -         |       -        |       -         |       -        |          -        |       -         |
+| L Day 13        |      -         |       -        |       -         |       -        |          -        |      :smiley:   |
 | M Day 14        |      -         |       -        |       -         |       -        |          -        |       -         |
 | X Day 15 (22/03)|      :smiley:  |       😟        |                |       :smiley: |       :smiley:   |                |
 | J Day 16        |               |               |                |               |                |                |
