@@ -29,7 +29,10 @@ public class CauseService {
         causeRepository.findAll().forEach(c->listCauses.add(c));
         return listCauses;
     }
-
+    @Transactional(readOnly = true)
+    public Cause getCauseById(Integer id){
+        return causeRepository.findById(id).get();
+    }
     @Transactional
     public void deleteCause(Cause cause) throws DataAccessException {
         causeRepository.delete(cause);
