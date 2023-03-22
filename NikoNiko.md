@@ -35,16 +35,27 @@ In the retrospective meeting, the team has a discussion about those results.
 | Day           | Daniel    | Guillermo  | Juan Luis     | Jesús     | Pedro     | Pepe     |
 | ------------- | ------------- | ------------  | -------------  | -------------  | -------------  | -------------  |
 | Day 1         |     :smiley:          |        :smiley:       |   :smiley:     |    :smiley:    |                |                |
-| Day 2         |      -         |               |                |                |                |                |
-| Day 3         |       -        |               |                |                |                |                |
-| Day 4         |        -       |               |                |                |                |                |
-| Day 5         |        -       |               |   :smiley:     |                |                |                |
-| Day 6         |        -       |               |                |                |                |                |
-| Day 7         |   :neutral_face:            |        :smiley:       |              |                 |   :smiley:              |                |
-| Day 8         |      -         |               |                |                |                |                |
-| Day 9         |      -         |               |                |                |                |                |
-| Day 10        |      -         |               |                |                |                |                |
-| Day 11        |   :smiley:            |               |                |              |    :smiley:              |                |
-| Day 12        |      -         |               |                |                |                |                |
-| Day 13        |      -         |               |                |                |                |                |
-| Day 14        |      -         |               |                |                |                |                |
+| Day 2         |      -         |               |                |       -         |                |                |
+| Day 3         |       -        |               |                |       -         |                |                |
+| Day 4         |        -       |               |                |       -         |                |                |
+| Day 5         |        -       |               |   :smiley:     |       -         |                |                |
+| Day 6         |        -       |               |                |       -         |                |                |
+| Day 7         |      -         |               |                |       -         |                 |                |
+| Day 8         |      :neutral_face:         |       :smiley:        |                |        :smiley:        |       :smiley:         |                |
+| Day 9         |      -         |               |                |        :smiley:        |                |                |
+| Day 10        |      -         |               |                |        -        |                |                |
+| Day 11        |     -          |               |                |        -        |                  |                |
+| Day 12        |      :smiley:         |               |                |        -       |       :smiley:         |                |
+| Day 13        |      -         |               |                |       -        |                |                |
+| Day 14        |      -         |               |                |       -        |                |                |
+| Day 15        |               |               |                |       :smiley:       |                |                |
+| Day 16        |               |               |                |               |                |                |
+| Day 17        |              |               |                |               |                |                |
+| Day 18        |               |               |                |               |                |                |
+| Day 19        |               |               |                |               |                |                |
+| Day 20        |               |               |                |               |                |                |
+| Day 21        |               |               |                |               |                |                |
+| Day 22        |               |               |                |               |                |                |
+| Day 23        |               |               |                |               |                |                |
+| Day 24        |               |               |                |               |                |                |
+
