@@ -32,30 +32,29 @@ In the retrospective meeting, the team has a discussion about those results.
 
 ## Sprint Template
 
-| Day           | Daniel    | Guillermo  | Juan Luis     | Jesús     | Pedro     | Pepe     |
-| ------------- | ------------- | ------------  | -------------  | -------------  | -------------  | -------------  |
-| Day 1         |     :smiley:          |        :smiley:       |   :smiley:     |    :smiley:    |                |                |
-| Day 2         |      -         |               |                |       -         |                |                |
-| Day 3         |       -        |               |                |       -         |                |                |
-| Day 4         |        -       |               |                |       -         |                |                |
-| Day 5         |        -       |               |   :smiley:     |       -         |                |                |
-| Day 6         |        -       |               |                |       -         |                |                |
-| Day 7         |      -         |               |                |       -         |                 |                |
-| Day 8         |      :neutral_face:         |       :smiley:        |                |        :smiley:        |       :smiley:         |                |
-| Day 9         |      -         |               |                |        :smiley:        |                |                |
-| Day 10        |      -         |               |                |        -        |                |                |
-| Day 11        |     -          |               |                |        -        |                  |                |
-| Day 12        |      :smiley:         |               |                |        -       |       :smiley:         |                |
-| Day 13        |      -         |               |                |       -        |                |                |
-| Day 14        |      -         |               |                |       -        |                |                |
-| Day 15        |               |               |                |       :smiley:       |                |                |
-| Day 16        |               |               |                |               |                |                |
-| Day 17        |              |               |                |               |                |                |
-| Day 18        |               |               |                |               |                |                |
-| Day 19        |               |               |                |               |                |                |
-| Day 20        |               |               |                |               |                |                |
-| Day 21        |               |               |                |               |                |                |
-| Day 22        |               |               |                |               |                |                |
-| Day 23        |               |               |                |               |                |                |
-| Day 24        |               |               |                |               |                |                |
+| Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
+| -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
+| X Day 1         |     :smiley:   |        :smiley: |   :smiley:     |    :smiley:    |       -         |         -        |
+| J Day 2         |      -         |      -         |       -         |       -         |       -         |        -        |
+| V Day 3         |       -        |       -        |       -         |       -         |        -        |        -        |
+| S Day 4         |        -       |       -       |        -        |       -         |         -        |        -        |
+| D Day 5         |        -       |       -        |   :smiley:     |       -         |         -        |        -        |
+| L Day 6         |        -       |       -        |       -         |       -         |        -         |       -         |
+| M Day 7         |      -         |       -        |       -         |       -         |        -         |       -         |
+| X Day 8         |:neutral_face:  |       :smiley: |       -         |        :smiley:|       :smiley:    |         -       |
+| J Day 9         |      -         |       -        |       -         |        :smiley: |        -         |       -         |
+| V Day 10        |      -         |       -        |       -         |        -        |        -         |       -         |
+| S Day 11        |     -          |       -        |       -         |        -        |        -         |       -         |
+| D Day 12        |      :smiley:  |       -        |       -         |        -       |       :smiley:   |        -         |
+| L Day 13        |      -         |       -        |       -         |       -        |          -        |       -         |
+| M Day 14        |      -         |       -        |       -         |       -        |          -        |       -         |
+| X Day 15        |      :smiley:  |               |                |       :smiley: |                  |                |
+| J Day 16        |               |               |                |               |                |                |
+| V Day 17        |               |               |                |               |                |                |
+| S Day 18        |               |               |                |               |                |                |
+| D Day 19        |               |               |                |               |                |                |
+| L Day 20        |               |               |                |               |                |                |
+| M Day 21        |               |               |                |               |                |                |
+| X Day 22        |               |               |                |               |                |                |
+| J Day 23        |               |               |                |               |                |                |
 
