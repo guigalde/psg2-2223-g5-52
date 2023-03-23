@@ -16,7 +16,8 @@
             <petclinic:inputField label="Nombre de la Causa" name="name"/>
             <petclinic:inputField label="Descripcion" name="description"/>
             <petclinic:inputField label="Organización al cargo" name="organizationInCharge"/>
-            <petclinic:inputField label="Cantidad objetivo" name="budgetTarget"/>
+            <label for="target" class="col-sm-2 control-label"><fmt:message key="budgetTarget"/></label>
+            <input type="number" name="budgetTarget" id="target"/>
 
             </div>
             
