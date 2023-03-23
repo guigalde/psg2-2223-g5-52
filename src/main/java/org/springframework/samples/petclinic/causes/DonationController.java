@@ -1,16 +1,12 @@
 package org.springframework.samples.petclinic.causes;
 
 import java.time.LocalDate;
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,18 +45,19 @@ public class DonationController {
 
     @Transactional
     @PostMapping("/cause/{causeId}/donation/new")
-    public String saveDonation(@Valid Donation donation, @PathVariable("causeId") int causeId, BindingResult br, RedirectAttributes attributes){
+    public ModelAndView saveDonation(@Valid Donation donation, @PathVariable("causeId") int causeId, BindingResult br, RedirectAttributes attributes){
         ModelAndView res = new ModelAndView();
         if(br.hasErrors()){
             res= new ModelAndView(CREATE_DONATION_FORM, br.getModel());
-            return CREATE_DONATION_FORM;
+            return res;
         }else{     
             donation.setDateOfDonation(LocalDate.now());
             donation.setCause(causeService.getCauseById(causeId));
             donationService.saveDonation(donation);
 
-            attributes.addFlashAttribute("message", "The donation was created successfully");
-            return "redirect:/cause/"+causeId+"/details";
+            attributes.addFlashAttribute("message", "La donacion fue creada con exito");
+            res= new ModelAndView("redirect:/cause/"+causeId+"/details");
+            return res;
         }
     }
 }

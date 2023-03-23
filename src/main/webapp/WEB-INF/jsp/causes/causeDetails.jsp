@@ -50,7 +50,17 @@
 
 <a class="btn btn-default" href="/cause"><fmt:message key="return"/></a> 
 <td>
+    <c:choose>
+    <c:when test="${total-cause.budgetTarget>=0}">
+    <br>
+    <br>
+        <h3><fmt:message key="closed"/></h3>
+    </c:when>
+    <c:otherwise>
     <a class="btn btn-default" href="/cause/${cause.id}/donation/new"><fmt:message key="doADonation"/></a> 
+    </c:otherwise>
+    </c:choose>
+   
 </td>
 
 </petclinic:layout>

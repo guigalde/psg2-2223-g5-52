@@ -35,11 +35,22 @@
                     <a href="/cause/${causeMap.key.id}/details"><fmt:message key="causeDetails"/></a> 
                 </td>
                 <td>
-                    <a href="/cause/${causeMap.key.id}/donation/new"><fmt:message key="doADonation"/></a> 
+                    <c:choose>
+                    <c:when test="${causeMap.value-causeMap.key.budgetTarget>=0}">
+                        <fmt:message key="closed"/>
+                    </c:when>
+                    <c:otherwise>
+                    <a href="/cause/${causeMap.key.id}/donation/new"><fmt:message key="doADonation"/></a>
+                    </c:otherwise>
+                    </c:choose>
                 </td>
                        
             </tr>
         </c:forEach>
         </tbody>
     </table>
+
+    <a class="btn btn-default" href="/cause/new"><fmt:message key="newCause"/></a> 
+
+
 </petclinic:layout>
