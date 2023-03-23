@@ -14,9 +14,21 @@
             <div class="form-group has-feedback">
           
             <petclinic:inputField label="Cantidad" name="budget"/>
-            <petclinic:selectField name="owner" label="Propietario" names="${listOwners}" size="1"/>
-            </div>
 
+            </div>
+            <div class="col-sm-10">
+            <label for="owner" class="col-sm-2 control-label"><fmt:message key="owner"/></label>
+            <select name="owner">
+                <c:forEach items="${listOwners}" var="owner" varStatus="loop">
+                    <option value="${loop.index+1}">
+                        <c:out value="${owner.firstName} "/> <c:out value="${owner.lastName}"/>
+                    </option>
+                </c:forEach>
+            </select>
+            </div>
+            <br>
+            <br>
+            <br>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                 <button class="btn btn-default" type="submit"><fmt:message key="doADonation"/></button>
