@@ -13,8 +13,9 @@
         <form:form modelAttribute="donation" class="form-horizontal">
             <div class="form-group has-feedback">
           
-            <petclinic:inputField label="Cantidad" name="budget"/>
-
+            <label for="target" class="col-sm-2 control-label"><fmt:message key="budgetTarget"/></label>
+            <input type="number" min="1" name="budget" step="0.01" id="target" required/> €
+    
             </div>
             <div class="col-sm-10">
             <label for="owner" class="col-sm-2 control-label"><fmt:message key="owner"/></label>

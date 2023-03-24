@@ -8,16 +8,17 @@
 
 
 <petclinic:layout pageName="newCause">
+        </script>
         <h2><fmt:message key="newCause"/></h2>
     
-        <form:form modelAttribute="cause" class="form-horizontal">
+        <form:form modelAttribute="cause" class="form-horizontal" onsubmit="checkAtrib();">
             <div class="form-group has-feedback">
           
             <petclinic:inputField label="Nombre de la Causa" name="name"/>
             <petclinic:inputField label="Descripcion" name="description"/>
             <petclinic:inputField label="Organización al cargo" name="organizationInCharge"/>
             <label for="target" class="col-sm-2 control-label"><fmt:message key="budgetTarget"/></label>
-            <input type="number" name="budgetTarget" id="target"/>
+            <input type="number" min="1" name="budgetTarget" step="0.01" id="target" required/> €
 
             </div>
             
