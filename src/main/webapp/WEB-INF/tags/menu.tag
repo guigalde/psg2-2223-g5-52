@@ -54,6 +54,11 @@
 				</petclinic:menuItem>		
 				
 
+				<petclinic:menuItem active="${name eq 'adoptions'}" url="/adoptions/find"
+					title="adoptions">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					<span><fmt:message key="adoptions"/></span>
+				</petclinic:menuItem>
 
 			</ul>
 

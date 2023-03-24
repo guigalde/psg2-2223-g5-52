@@ -106,6 +106,15 @@
                                     </spring:url>
                                     <a class="btn btn-default" href="${fn:escapeXml(visitUrl)}"><fmt:message key="addBooking"/></a> 
                                 </td>
+                                <c:if test="${loggedOwner.id == owner.id}">
+                                <td>
+                                    <spring:url value="/owners/{ownerId}/pets/{petId}/adoption/new" var="adoptionUrl">
+                                        <spring:param name="ownerId" value="${owner.id}"/>
+                                        <spring:param name="petId" value="${pet.id}"/>
+                                    </spring:url>
+                                    <a class="btn btn-default" href="${fn:escapeXml(adoptionUrl)}"><fmt:message key="addAdoption"/></a> 
+                                </td>
+                                </c:if>
                             </td>
                         </tr>
                     </table>

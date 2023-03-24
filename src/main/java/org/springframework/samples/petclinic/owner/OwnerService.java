@@ -53,6 +53,10 @@ public class OwnerService {
 	public Owner findOwnerById(int id) throws DataAccessException {
 		return ownerRepository.findById(id);
 	}
+	@Transactional(readOnly=true)
+	public Owner findOwnerByUsername(String username){
+		return ownerRepository.findOwnerByUsername(username);
+	}
 
 	@Transactional(readOnly = true)
 	public Collection<Owner> findOwnerByLastName(String lastName) throws DataAccessException {
