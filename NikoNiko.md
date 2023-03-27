@@ -40,15 +40,15 @@ In the retrospective meeting, the team has a discussion about those results.
 | S Day 4         |        -       |       -       |        -        |       -         |         -        |        -        |
 | D Day 5         |        -       |       -        |   :smiley:     |       -         |         -        |        -        |
 | L Day 6         |        -       |       -        |       -         |       -         |        -         |       -         |
-| M Day 7         |      -         |       -        |       -         |       -         |        -         |       -         |
-| X Day 8 (15/03) |:neutral_face:  |       :smiley: |       -         |        :smiley:|       :smiley:    |      :smiley:   |
-| J Day 9         |      -         |       -        |       -         |        :smiley: |        -         |       -         |
-| V Day 10        |      -         |       😐       |       -         |        -        |        -         |       -         |
+| M Day 7         |      -         |       -        |      :smiley:   |       -         |        -         |       -         |
+| X Day 8 (15/03) |:neutral_face:  |       :smiley: |   :neutral_face:|        :smiley:|       :smiley:    |      :smiley:   |
+| J Day 9         |      -         |       -        |  :neutral_face:|        :smiley: |        -         |       -         |
+| V Day 10        |      -         |       😐       |    :smiley:    |        -        |        -         |       -         |
 | S Day 11        |     -          |       -        |       -         |        -        |        -         |       -         |
-| D Day 12        |      :smiley:  |       -        |       -         |        -       |       :smiley:   |        -         |
-| L Day 13        |      -         |       -        |       -         |       -        |          -        |      :smiley:   |
-| M Day 14        |      -         |       -        |       -         |       -        |          -        |      :smiley:   |
-| X Day 15 (22/03)|      :smiley:  |       😟        |                |       :smiley: |       :smiley:   |      :smiley:    |
+| D Day 12        |      :smiley:  |       -        |   :smiley:    |        -       |       :smiley:   |        -         |
+| L Day 13        |      -         |       -        |   :smiley:      |       -        |          -        |      :smiley:   |
+| M Day 14        |      -         |       -        |    :smiley:      |       -        |          -        |      :smiley:   |
+| X Day 15 (22/03)|      :smiley:  |       😟        |   :smiley:      |       :smiley: |       :smiley:   |      :smiley:    |
 | J Day 16        |               |               |                |               |                |                |
 | V Day 17        |               |               |                |               |                |                |
 | S Day 18        |               |               |                |               |                |                |
