@@ -54,7 +54,7 @@ In the retrospective meeting, the team has a discussion about those results.
 | S Day 18        |               |               |      -          |               |        -        |                |
 | D Day 19        |               |               |    :smiley:   |               |        -        |                |
 | L Day 20        |               |               |      :smiley: |               |         -       |                |
-| M Day 21        |               |               |      😐       |               |         -       |                |    
-| X Day 22 (29/03)|               |               |                |               |     :smiley: |                |
+| M Day 21        |               |               |      😐       |               |    :smiley:    |                |    
+| X Day 22 (29/03)|               |               |                |               |                |                |
 | J Day 23        |               |               |                |               |                |                |
 
