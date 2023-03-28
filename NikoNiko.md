@@ -49,12 +49,12 @@ In the retrospective meeting, the team has a discussion about those results.
 | L Day 13        |      -         |       -        |   -            |       -        |          -        |      :smiley:   |
 | M Day 14        |      -         |       -        |    :smiley:      |       -        |          -        |      :smiley:   |
 | X Day 15 (22/03)|      :smiley:  |       😟      |   :neutral_face:|       :smiley: |       :smiley:   |      :smiley:    |
-| J Day 16        |               |               |   :neutral_face:  |               |         -       |                |
-| V Day 17        |               |               |      :smiley:    |               |        -        |                |
-| S Day 18        |               |               |      -          |               |        -        |                |
-| D Day 19        |               |               |    :smiley:   |               |        -        |                |
-| L Day 20        |               |               |      :smiley: |               |         -       |                |
-| M Day 21        |               |               |      😐       |               |    :smiley:    |                |    
+| J Day 16        |               |               |   :neutral_face:  |       -        |         -       |                |
+| V Day 17        |               |               |      :smiley:    |        -       |        -        |                |
+| S Day 18        |               |               |      -          |         -      |        -        |                |
+| D Day 19        |               |               |    :smiley:   |          -     |        -        |                |
+| L Day 20        |               |               |      :smiley: |        😐       |         -       |                |
+| M Day 21        |               |               |      😐       |        😐       |    :smiley:    |                |    
 | X Day 22 (29/03)|               |               |                |               |                |                |
 | J Day 23        |               |               |                |               |                |                |
 
