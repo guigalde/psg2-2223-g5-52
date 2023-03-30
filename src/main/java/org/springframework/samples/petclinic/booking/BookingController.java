@@ -74,8 +74,8 @@ public class BookingController {
             try{
                 bookingService.saveBooking(booking);
             }catch(ConcurrentBookingsForPet exception){
-                res = new ModelAndView("redirect:/owners/{ownerId}/pets/{petId}/booking/new");
-                attributes.addFlashAttribute("message", "Booked dates overlap existing bookings for this pet");
+                res = new ModelAndView(CREATION_BOOKING_FROM, br.getModel());
+                res.addObject("errorMessage", "Booked dates overlap existing bookings for this pet");
                 return res;
             }
             res = new ModelAndView("redirect:/owners/{ownerId}");
