@@ -34,9 +34,9 @@ import org.springframework.util.StringUtils;
 public class PetService {
 
 	private PetRepository petRepository;
-	
+
 	private VisitRepository visitRepository;
-	
+
 
 	@Autowired
 	public PetService(PetRepository petRepository,
@@ -49,11 +49,25 @@ public class PetService {
 	public Collection<PetType> findPetTypes() throws DataAccessException {
 		return petRepository.findPetTypes();
 	}
-	
+
 	@Transactional
 	public void saveVisit(Visit visit) throws DataAccessException {
 		visitRepository.save(visit);
 	}
+
+    @Transactional
+    public void deleteVisit(Visit visit) throws DataAccessException, DuplicatedPetNameException {
+        Pet pet = petRepository.findById(visit.getPet().getId()).orElse(null);
+        pet.removeVisit(visit);
+        savePet(pet);
+        visitRepository.deleteById(visit.getId());
+    }
+
+    @Transactional(readOnly = true)
+    public Visit findVisitById(int id) throws DataAccessException {
+        return visitRepository.findById(id);
+    }
+
 
 	@Transactional(readOnly = true)
 	public Pet findPetById(int id) throws DataAccessException {
@@ -64,17 +78,28 @@ public class PetService {
 	public void savePet(Pet pet) throws DataAccessException, DuplicatedPetNameException {
 			if(pet.getOwner()!=null){
 				Pet otherPet=pet.getOwner().getPetwithIdDifferent(pet.getName(), pet.getId());
-            	if (StringUtils.hasLength(pet.getName()) &&  (otherPet!= null && otherPet.getId()!=pet.getId())) {            	
+            	if (StringUtils.hasLength(pet.getName()) &&  (otherPet!= null && otherPet.getId()!=pet.getId())) {
             		throw new DuplicatedPetNameException();
             	}else
-                	petRepository.save(pet);                
+                	petRepository.save(pet);
 			}else
 				petRepository.save(pet);
 	}
+
+    @Transactional
+    public void deletePet(Pet pet) throws DataAccessException {
+        petRepository.delete(pet);
+    }
+
+    @Transactional
+    public void deletePet(Integer id) throws DataAccessException {
+        petRepository.deleteById(id);
+    }
 
 
 	public Collection<Visit> findVisitsByPetId(int petId) {
 		return visitRepository.findByPetId(petId);
 	}
+
 
 }

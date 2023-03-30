@@ -15,14 +15,21 @@
  */
 package org.springframework.samples.petclinic.owner;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.samples.petclinic.adoptions.Adoption;
+import org.springframework.samples.petclinic.adoptions.AdoptionApplication;
+import org.springframework.samples.petclinic.adoptions.AdoptionApplicationRepository;
+import org.springframework.samples.petclinic.adoptions.AdoptionRepository;
 import org.springframework.samples.petclinic.user.AuthoritiesService;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 
 /**
  * Mostly used as a facade for all Petclinic controllers Also a placeholder
@@ -33,22 +40,32 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class OwnerService {
 
-	private OwnerRepository ownerRepository;	
-	
+	private OwnerRepository ownerRepository;
+
+	private AdoptionRepository adoptionRepository;
+
+	private AdoptionApplicationRepository adoptionApplicationRepository;
+
 	@Autowired
 	private UserService userService;
-	
+
 	@Autowired
 	private AuthoritiesService authoritiesService;
 
 	@Autowired
-	public OwnerService(OwnerRepository ownerRepository) {
+	public OwnerService(OwnerRepository ownerRepository, AdoptionRepository adoptionRepository,AdoptionApplicationRepository adoptionApplicationRepository) {
 		this.ownerRepository = ownerRepository;
-	}	
+		this.adoptionApplicationRepository = adoptionApplicationRepository;
+		this.adoptionRepository=adoptionRepository;
+	}
 
 	@Transactional(readOnly = true)
 	public Owner findOwnerById(int id) throws DataAccessException {
 		return ownerRepository.findById(id);
+	}
+	@Transactional(readOnly=true)
+	public Owner findOwnerByUsername(String username){
+		return ownerRepository.findOwnerByUsername(username);
 	}
 
 	@Transactional(readOnly = true)
@@ -57,13 +74,42 @@ public class OwnerService {
 	}
 
 	@Transactional
+	public List<Owner> findAllOwners() throws DataAccessException {
+		List<Owner> res = new ArrayList<>();
+	 	ownerRepository.findAll().forEach(c->res.add(c));
+		return res;
+	}
+
+	@Transactional
 	public void saveOwner(Owner owner) throws DataAccessException {
 		//creating owner
-		ownerRepository.save(owner);		
+		ownerRepository.save(owner);
 		//creating user
 		userService.saveUser(owner.getUser());
 		//creating authorities
 		authoritiesService.saveAuthorities(owner.getUser().getUsername(), "owner");
-	}		
+	}
+    @Transactional
+    public void deleteOwner(int id) {
+        Owner owner= ownerRepository.findById(id);
+		deleteAdoptionsAndApplications(id);
+        owner.onDeleteSetNull();
+        ownerRepository.save(owner);
+        ownerRepository.deleteById(id);
+    }
+    @Transactional
+    public void deleteOwner(Owner owner) {
+        ownerRepository.delete(owner);
+    }
+
+	@Transactional
+	public void deleteAdoptionsAndApplications(Integer ownerId){
+		List<Adoption> adoptions = adoptionRepository.findAllByOwnerId(ownerId);
+		List<AdoptionApplication> applicationsMadeByOwner = adoptionApplicationRepository.findApplicationByOwnerId(ownerId);
+		adoptionApplicationRepository.deleteAll(applicationsMadeByOwner);
+		List<AdoptionApplication> applicationsInOwnerAdoptions = adoptionApplicationRepository.findApplicationByPublishingOwnerId(ownerId);
+		adoptionApplicationRepository.deleteAll(applicationsInOwnerAdoptions);
+		adoptionRepository.deleteAll(adoptions);
+	}
 
 }

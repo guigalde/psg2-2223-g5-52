@@ -76,4 +76,10 @@ public class Vet extends Person {
 		getSpecialtiesInternal().add(specialty);
 	}
 
+    public void onDeleteSetNull(){
+        this.specialties=null;
+        this.firstName=null;
+        this.lastName=null;
+    }
+
 }
