@@ -15,4 +15,7 @@ public interface AdoptionApplicationRepository extends CrudRepository<AdoptionAp
 
     @Query("Select a from AdoptionApplication a where a.owner.id = :ownerId AND a.adoption.id = :adoptionId")
     public AdoptionApplication findExistingApplication(@Param("ownerId") Integer ownerId, @Param("adoptionId") Integer adoptionId);
+
+    @Query("Select a from AdoptionApplication a where a.owner.id = :ownerId")
+    public List<AdoptionApplication> findApplicationByOwnerId(@Param("ownerId") Integer ownerId);
 }
