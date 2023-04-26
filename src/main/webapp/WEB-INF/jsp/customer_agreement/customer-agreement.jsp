@@ -6,6 +6,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page pageEncoding="UTF-8"%>
 
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
 <style>
     p {font-size:medium}
 </style>
@@ -14,6 +17,96 @@
     <h1>Acuerdo de cliente</h1>
     <ol style="font-weight: bold; font-size: large;">
         <li></li>
+        <li>
+            <h2>Planes de pago</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><b>Planes disponibles</b></th>
+                        <th>
+                            <b><br>Básico</br></b>
+                            <small style="font-size: 12px; font-weight: 400;">Plan gratuito</small>
+                        </th>
+                        <th>
+                            <b><br>Avanzado</br></b>
+                            <small style="font-size: 12px; font-weight: 400;">Prestaciones extendidas</small>
+                        </th>
+                        <th>
+                            <b><br>Pro</br></b>
+                            <small style="font-size: 12px; font-weight: 400;">El mejor servicio disponible</small>
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Precios</td>
+                    <td>
+                        <br>Gratis</br>
+                    </td>
+                    <td>
+                        <br>30.00 €/ año</br>
+                        <a href="#">Comprar ahora</a>
+                    </td>
+                    <td>
+                        <br>90.00 €/ año</br>
+                        <a href="#">Comprar ahora</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Acuerdo a nivel de servicio</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>Manejo de múltiples clínicas</br>
+                        <small style="font-size: 12px; font-weight: 400;">Disponible solo para dueños de clínicas</small>
+                    </td>
+                    <td><br><i class="fas fa-times"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                </tr>
+                <tr>
+                    <td>Límite de mascotas</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>Sin límite</td>
+                </tr>
+                <tr>
+                    <td>Límite de consultas mensuales</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>Número máximo de veterinarios</br>
+                        <small style="font-size: 12px; font-weight: 400;">Disponible solo para dueños de clínicas</small>
+                    </td>
+                    <td><br>2</br></td>
+                    <td><br>4</br></td>
+                    <td><br>Sin límite</br></td>
+                </tr>
+                <tr>
+                    <td>Tipos de mascotas disponibles</td>
+                    <td>Perros y gatos</td>
+                    <td>Perros, gatos, pájaros y hamsters</td>
+                    <td>Todos los tipos</td>
+                </tr>
+                <tr>
+                    <td>Soporte a peticiones de usuario</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Disponibilidad de solicitudes de cambio</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+            </table>
+        </li>
         <li>
             <h2>Acuerdo a nivel de servicio</h2>
 
