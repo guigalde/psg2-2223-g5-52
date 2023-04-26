@@ -100,10 +100,16 @@
                     <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
-                    <td>Disponibilidad de solicitudes de cambio</td>
+                    <td>Admision de solicitudes de cambio</td>
                     <td><i class="fas fa-times"></i></td>
                     <td><i class="fas fa-times"></i></td>
                     <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Disponibilidad del soporte</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td> 9:00 a 21:00 de lunes a viernes</td>
                 </tr>
             </table>
         </li>
