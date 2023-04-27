@@ -60,6 +60,12 @@
 					<span><fmt:message key="adoptions"/></span>
 				</petclinic:menuItem>
 
+				<petclinic:menuItem active="${name eq 'customer-agreement'}" url="/customer-agreement"
+					title="customer-agreement">
+					<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					<span><fmt:message key="customer-agreement"/></span>
+				</petclinic:menuItem>
+
 			</ul>
 
 
