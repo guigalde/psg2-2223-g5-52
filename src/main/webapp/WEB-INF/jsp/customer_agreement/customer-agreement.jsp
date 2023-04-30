@@ -23,7 +23,7 @@
             </p>
             <ul style="font-size:medium; font-weight: normal;">
                 <li>
-                    Solicitar una resolución de incidencias a el servicio de petclinic en caso de dificultades 
+                    Solicitar una resolución de incidencias al servicio de petclinic en caso de dificultades 
                     técnicas o problemas con el servicio que requieran la atención del equipo de soporte de la plataforma Petclinic.
                 </li>
                 <li>
