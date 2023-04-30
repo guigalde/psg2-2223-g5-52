@@ -18,7 +18,7 @@
             <h2>Servicios Asociados</h2>
 
             <p>
-                Comenzado el acuerdo de este contrato, los usuarios de la plataforma petclinic podran enviar
+                Comenzado el acuerdo de este contrato, los usuarios de la plataforma petclinic podrán enviar
                 tickets al soporte técnico de Petclinic de cualquiera de las siguientes formas:
             </p>
             <ul style="font-size:medium; font-weight: normal;">
