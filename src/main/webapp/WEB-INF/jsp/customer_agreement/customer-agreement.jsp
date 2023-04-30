@@ -14,6 +14,25 @@
     <h1>Acuerdo de cliente</h1>
     <ol style="font-weight: bold; font-size: large;">
         <li></li>
+        <li> 
+            <h2>Servicios Asociados</h2>
+
+            <p>
+                Comenzado el acuerdo de este contrato, los usuarios de la plataforma petclinic podran enviar
+                tickets al soporte técnico de Petclinic de cualquiera de las siguientes formas:
+            </p>
+            <ul style="font-size:medium; font-weight: normal;">
+                <li>
+                    Solicitar una resolución de incidencias a el servicio de petclinic en caso de dificultades 
+                    técnicas o problemas con el servicio que requieran la atención del equipo de soporte de la plataforma Petclinic.
+                </li>
+                <li>
+                    Solicitar cambios y añadidos para la plataforma que pueden ser considerados a implementar 
+                    por el equipo y mejoren la experiencia del usuario.
+                </li>
+            </ul>
+            <br>
+        </li>
         <li>
             <h2>Acuerdo a nivel de servicio</h2>
 
