@@ -16,13 +16,13 @@
 
     <h1>Acuerdo de cliente</h1>
     <ol style="font-weight: bold; font-size: large;">
-        <li></li>
-        <li>
-            <h2>Duración</h2>
+        <li><h2>Duración</h2>
             <p>
                 Este Acuerdo de Cliente estará vigente durante todo el período delimitado desde el 1 de septiembre del año 2022 hasta
                 el 28 de diciembre del año 2023, esos dias incluidos en el periodo.
-            </p>
+            </p></li>
+        <li>
+
 
             <h2>Planes de pago</h2>
             <table class="table table-striped">
