@@ -19,12 +19,15 @@
 
             <p>
                 Comenzado el acuerdo de este contrato, los usuarios de la plataforma petclinic podrán enviar
-                tickets al soporte técnico de Petclinic de cualquiera de las siguientes formas:
+                tickets al soporte técnico de Petclinic y solicitar una resolución de incidencias al servicio de 
+                petclinic en caso de dificultades técnicas o problemas con el servicio que requieran la 
+                atención del equipo de soporte de la plataforma Petclinic.
+
+                Adicionalmente, si el usuario posee el plan "Pro" de Petclinic, podrá solicitar los siguientes servicios:
             </p>
             <ul style="font-size:medium; font-weight: normal;">
                 <li>
-                    Solicitar una resolución de incidencias al servicio de petclinic en caso de dificultades 
-                    técnicas o problemas con el servicio que requieran la atención del equipo de soporte de la plataforma Petclinic.
+                    Solicitud de usuario (WIP)
                 </li>
                 <li>
                     Solicitar cambios y añadidos para la plataforma que pueden ser considerados a implementar 
