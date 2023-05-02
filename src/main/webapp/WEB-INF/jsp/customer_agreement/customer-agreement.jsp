@@ -282,6 +282,7 @@
                 </li>
             </ul>
         </li>
+        <h6>Nº de versión: 1.0</h6>
     </ol>
     
 
