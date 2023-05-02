@@ -68,8 +68,8 @@
                 </tr>
                 <tr>
                     <td>Límite de mascotas</td>
-                    <td>2</td>
-                    <td>5</td>
+                    <td>3</td>
+                    <td>6</td>
                     <td>Sin límite</td>
                 </tr>
                 <tr>
@@ -111,7 +111,16 @@
                     <td><i class="fas fa-times"></i></td>
                     <td> 9:00 a 21:00 de lunes a viernes</td>
                 </tr>
+                <tr>
+                    <td>Disponibilidad del servicio</td>
+                    <td>90%</td>
+                    <td>95%</td>
+                    <td>99%</td>
+                </tr>
             </table>
+            <p>
+                El soporte ofrecido a los usuarios del plan pro se apoya en un chat directo con nuestro equipo de soporte y una línea telefónica en el horario establecido anteriormente.
+            </p>
         </li>
         <li>
             <h2>Acuerdo a nivel de servicio</h2>
