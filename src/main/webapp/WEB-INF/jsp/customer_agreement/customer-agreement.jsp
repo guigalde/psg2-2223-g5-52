@@ -6,6 +6,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page pageEncoding="UTF-8"%>
 
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
 <style>
     p {font-size:large}
 </style>
@@ -13,7 +16,120 @@
 
     <h1 style="font-size:xx-large">Acuerdo de cliente</h1>
     <ol style="font-weight: bold; font-size: x-large;">
-        <li></li>
+        <li><h2>Duración</h2>
+            <p>
+                Este Acuerdo de Cliente estará vigente durante todo el período delimitado desde el 1 de septiembre del año 2022 hasta
+                el 28 de diciembre del año 2023, ambos dias incluidos en el periodo.
+            </p></li>
+        <br>
+        <li>
+
+
+            <h2>Planes de pago</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><b>Planes disponibles</b></th>
+                        <th>
+                            <b><br>Básico</br></b>
+                            <small style="font-size: 12px; font-weight: 400;">Plan gratuito</small>
+                        </th>
+                        <th>
+                            <b><br>Avanzado</br></b>
+                            <small style="font-size: 12px; font-weight: 400;">Prestaciones extendidas</small>
+                        </th>
+                        <th>
+                            <b><br>Pro</br></b>
+                            <small style="font-size: 12px; font-weight: 400;">El mejor servicio disponible</small>
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Precios</td>
+                    <td>
+                        <br>Gratis</br>
+                    </td>
+                    <td>
+                        <br>30.00 €/ año</br>
+                        <a href="#">Comprar ahora</a>
+                    </td>
+                    <td>
+                        <br>90.00 €/ año</br>
+                        <a href="#">Comprar ahora</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Acuerdo a nivel de servicio</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>Manejo de múltiples clínicas</br>
+                        <small style="font-size: 12px; font-weight: 400;">Disponible solo para dueños de clínicas</small>
+                    </td>
+                    <td><br><i class="fas fa-times"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                </tr>
+                <tr>
+                    <td>Límite de mascotas</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>Sin límite</td>
+                </tr>
+                <tr>
+                    <td>Límite de consultas mensuales</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>Número máximo de veterinarios</br>
+                        <small style="font-size: 12px; font-weight: 400;">Disponible solo para dueños de clínicas</small>
+                    </td>
+                    <td><br>2</br></td>
+                    <td><br>4</br></td>
+                    <td><br>Sin límite</br></td>
+                </tr>
+                <tr>
+                    <td>Tipos de mascotas disponibles</td>
+                    <td>Perros y gatos</td>
+                    <td>Perros, gatos, pájaros y hamsters</td>
+                    <td>Todos los tipos</td>
+                </tr>
+                <tr>
+                    <td>Soporte a peticiones de usuario</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Admision de solicitudes de cambio</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Disponibilidad del soporte</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td> 9:00 a 21:00 de lunes a viernes</td>
+                </tr>
+                <tr>
+                    <td>Disponibilidad del servicio</td>
+                    <td>90%</td>
+                    <td>95%</td>
+                    <td>99%</td>
+                </tr>
+            </table>
+            <p>
+                El soporte ofrecido a los usuarios del plan pro se apoya en un chat directo con nuestro equipo de soporte y una línea telefónica en el horario establecido anteriormente.
+            </p>
+        </li>
+        
         <li>
             <h2 style="font-size:x-large">Acuerdo a nivel de servicio</h2>
 
@@ -144,6 +260,10 @@
                 </li>
             </ul>
         </li>
+        <br>
+        <br>
+        <h6>Última fecha de modificación: 03/05/2023</h6>
+        <h6>Nº de versión: 1.1</h6>
     </ol>
     
 
