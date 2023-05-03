@@ -19,8 +19,9 @@
         <li><h2>Duración</h2>
             <p>
                 Este Acuerdo de Cliente estará vigente durante todo el período delimitado desde el 1 de septiembre del año 2022 hasta
-                el 28 de diciembre del año 2023, esos dias incluidos en el periodo.
+                el 28 de diciembre del año 2023, ambos dias incluidos en el periodo.
             </p></li>
+        <br>
         <li>
 
 
