@@ -7,19 +7,19 @@
 <%@page pageEncoding="UTF-8"%>
 
 <style>
-    p {font-size:medium}
+    p {font-size:large}
 </style>
 <petclinic:layout pageName="customer-agreement">
 
-    <h1>Acuerdo de cliente</h1>
-    <ol style="font-weight: bold; font-size: large;">
+    <h1 style="font-size:xx-large">Acuerdo de cliente</h1>
+    <ol style="font-weight: bold; font-size: x-large;">
         <li></li>
         <li>
-            <h2>Acuerdo a nivel de servicio</h2>
+            <h2 style="font-size:x-large">Acuerdo a nivel de servicio</h2>
 
             <ul>
                 <li>
-                    <h3>Objetivos del acuerdo</h3>
+                    <h3 style="font-size: large">Objetivos del acuerdo</h3>
 
                     <p>
                         Este acuerdo a nivel de servicio (“SLA”) rige el uso de el servicio de 
@@ -31,44 +31,17 @@
                 </li>
 
                 <li>
-                    <h3>Compromiso de servicio</h3>
+                    <h3 style="font-size: large">Compromiso de servicio</h3>
 
                     <p>
-                        PSG2-2223-G5-52 se compromete a que PetClinic Service esté disponible en un porcentaje mayor al 99%, 
-                        esto es que el Tiempo Total de Inactividad (“TTO”) será inferior inferior al 1% . 
-                        En caso de incumplimiento del SLA, usted podrá recibir un Crédito de Servicio como se describe más adelante:
+                        PSG2-2223-G5-52 se compromete en la medida de lo posible a que el Tiempo Total de Asignación desde que se 
+                        recibe una petición hasta que se asigna a un trabajador para su solución ("TTO") sea menor a dos horas. 
                     </p>
-
-                    <br>
-
-                    <table class="table table-striped" style="font-size: 83%;">
-                        <thead>
-                            <tr>
-                                <th>Porcentaje de Tiempo Total de Inactividad del servicio</th>
-                                <th>Porcentaje de Crédito de servicio</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>Superior al 1% e inferior al 3,5%</td>
-                                <td>35%</td>
-                            </tr>
-                            <tr>
-                                <td>Superior al 3,5% e inferior al 7%</td>
-                                <td>60%</td>
-                            </tr>
-                            <tr>
-                                <td>Superior al 7%</td>
-                                <td>100%</td>
-                            </tr>
-                        </tbody>
-                    </table>
 
                     <br> <br>
 
                     <p>
-                        Además, la empresa también se compromete a que el servicio tenga un Tiempo de Respuesta de la Resolución (“TTR”)
+                        Además, la empresa también se compromete a que el servicio tenga un Tiempo de Respuesta de la Resolución ("TTR")
                          para las incidencias con el sitio web dependerá del nivel de prioridad.
                     </p>
 
@@ -76,7 +49,7 @@
 
                     <p>Para proporcionar una respuesta eficiente a las incidencias se establecen tres niveles de prioridad:</p>
 
-                    <ul style="font-size:medium; font-weight: normal;">
+                    <ul style="font-size:large; font-weight: normal;">
                         <li>
                             Prioridad baja: Incidencias que ocurren a un número reducido de usuarios, 
                             que causen molestia o producen fallos en la visualización de la página.
@@ -95,21 +68,18 @@
 
                     <p>En caso de incumplimiento, se aplicarán las siguientes medidas:</p>
                     
-                    <ul style="font-size:medium; font-weight: normal;">
+                    <ul style="font-size:large; font-weight: normal;">
                         <li>
-                            Prioridad baja: Se proporcionará una solución temporal en las 12 horas siguientes a la 
-                            identificación de la incidencia, y una solución permanente en las 72 horas siguientes. 
+                            Prioridad baja: Se proporcionará una solución permanente en las 672 horas siguientes. 
                             No se dará ninguna compensación.
                         </li>
                         <li>
-                            Prioridad media: Se proporcionará una solución temporal en las 8 horas siguientes a la identificación de la incidencia, 
-                            y una solución permanente en las 48 horas siguientes. Se dará una compensación equivalente al 10% de 
-                            Créditos de Servicio.
+                            Prioridad media: Se proporcionará una solución permanente en las 336 horas siguientes. 
+                            Se dará una compensación equivalente al 10% de Créditos de Servicio en caso de incumplimiento.
                         </li>
                         <li>
-                            Prioridad alta: Se proporcionará una solución temporal en las 4 horas siguientes a 
-                            la identificación de la incidencia, y una solución permanente en las 24 horas siguientes. 
-                            Se dará una compensación equivalente al 20% de Créditos de Servicio.
+                            Prioridad alta: Se proporcionará una solución permanente en las 168 horas siguientes. 
+                            Se dará una compensación equivalente al 20% de Créditos de Servicio en caso de incumplimiento.
                         </li>
                     </ul>
 
@@ -133,7 +103,7 @@
                     <br>
                 </li>
                 <li>
-                    <h3>Créditos de Servicio</h3>
+                    <h3 style="font-size: large">Créditos de Servicio</h3>
                     <p>
                         Los Créditos de Servicio se calculan como un porcentaje de la factura mensual del cliente. 
                         La empresa aplicará estos créditos a la siguiente factura en forma de descuento. Los Créditos de Servicio 
@@ -144,11 +114,11 @@
                     <br>
                 </li>
                 <li>
-                    <h3>Exclusiones del SLA</h3>
+                    <h3 style="font-size: large">Exclusiones del SLA</h3>
                     <p>
                         El SLA no se aplicará en los siguientes casos:
                     </p>
-                    <ol style="font-size:medium; font-weight: normal;">
+                    <ol style="font-size:large; font-weight: normal;">
                         <li>
                             Cuando el usuario experimente problemas de conexión a Internet o 
                             relacionados con el hardware/software de su dispositivo.
