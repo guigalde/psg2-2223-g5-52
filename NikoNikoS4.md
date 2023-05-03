@@ -34,7 +34,7 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
-| X Day 1 (17/04) |               |                 |                |                |                 |       :smiley:    |
+| X Day 1 (19/04) |               |                 |                |                |     :smiley:      |       :smiley:    |
 | J Day 2         |      -         |      -         |       -         |       -         |       -         |        -        |
 | V Day 3         |       -        |       -        |       -         |       -         |        -        |        -        |
 | S Day 4         |        -       |       -       |        -        |       -         |         -        |        -        |
@@ -44,11 +44,11 @@ In the retrospective meeting, the team has a discussion about those results.
 | X Day 8         |                |                |               |                 |                  |                 |
 | J Day 9         |      -         |       -        |  -            |                 |        -         |       -         |
 | V Day 10        |      -         |                |     -        |        -        |        -         |       -         |
-| S Day 11        |     -          |       -        |       -         |        -        |        -         |       -         |
+| S Day 11        |     -          |       -        |       -         |        -        |    :smiley:      |       -         |
 | D Day 12        |                |       -        |               |        -       |                   |        -         |
 | L Day 13        |      -         |       -        |   -            |       -        |          -        |                 |
-| M Day 14        |      -         |       -        |                 |       -        |          -        |                |
-| X Day 15        |                |                |                 |                |                 |                |
+| M Day 14        |      -         |       -        |                 |       -        |    :smiley:       |                |
+| X Day 15        |                |                |                 |                |   :smiley:      |                |
 | J Day 16        |      -         |      -         |                 |       -        |         -       |       -         |
 | V Day 17        |      -         |       -        |                 |        -       |        -        |       -         |
 | S Day 18        |      -         |       -        |      -          |         -      |        -        |        -        |
