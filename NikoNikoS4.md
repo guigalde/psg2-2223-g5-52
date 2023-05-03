@@ -34,27 +34,29 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
-| X Day 1 (19/04) |  :smiley:      |                 |   :smiley:     |                |     :smiley:      |       :smiley:    |
-| J Day 2         |      -         |      -         |       -         |       -         |       -         |        -        |
-| V Day 3         |       -        |       -        |       -         |       -         |        -        |        -        |
-| S Day 4         |        -       |       -       |        -        |       -         |         -        |        -        |
-| D Day 5         |        -       |       -        |                |       -         |         -        |        -        |
-| L Day 6         |     :smiley:   |       -        |       -         |       -         |        -         |       -         |
-| M Day 7         |      -         |       -        |      -        |       -         |        -         |       -         |
-| X Day 8         |                |                |  :smiley:     |                 |                  |                 |
-| J Day 9         |      -         |       -        |  -            |                 |        -         |       -         |
-| V Day 10        |      -         |                |     -        |        -        |        -         |       -         |
-| S Day 11        |     -          |       -        |  :smiley:      |        -        |    :smiley:      |       -         |
-| D Day 12        |                |       -        |               |        -       |                   |        -         |
-| L Day 13        |      -         |       -        |   -            |       -        |          -        |                 |
-| M Day 14        |      -         |       -        |                 |       -        |    :smiley:       |                |
-| X Day 15        |     :smiley:   |                |                 |                |   :smiley:      |                |
-| J Day 16        |      -         |      -         |                 |       -        |         -       |       -         |
-| V Day 17        |      -         |       -        |                 |        -       |        -        |       -         |
-| S Day 18        |      -         |       -        |      -          |         -      |        -        |        -        |
-| D Day 19        |      -         |       -        |                 |          -     |        -        |          -      |
-| L Day 20        |                |       -        |                |                 |         -       |       -         |
-| M Day 21        |      -         |                |                 |                 |                |        -        |    
-| X Day 22        |                |        -       |       -         |                |                |        -        |
-| J Day 23        |                |                |                 |                |                 |                 |
+| L Day 1 (17/04) |                |       😐        |                |                 |         -       |       -         |
+| M Day 2        |      -         |                |                 |                 |                |        -        |
+| X Day 3        |  :smiley:      |       😐          |   :smiley:     |                |     :smiley:      |       :smiley:    |
+| J Day 4         |      -         |      -         |       -         |       -         |       -         |        -        |
+| V Day 5         |       -        |       -        |       -         |       -         |        -        |        -        |
+| S Day 6         |        -       |       -       |        -        |       -         |         -        |        -        |
+| D Day 7         |        -       |       -        |                |       -         |         -        |        -        |
+| L Day 8         |     :smiley:   |       -        |       -         |       -         |        -         |       -         |
+| M Day 9         |      -         |       -        |      -        |       -         |        -         |       -         |
+| X Day 10         |                |       😟         |  :smiley:     |                 |                  |                 |
+| J Day 11        |      -         |       -        |  -            |                 |        -         |       -         |
+| V Day 12        |      -         |                |     -        |        -        |        -         |       -         |
+| S Day 13        |     -          |       -        |  :smiley:      |        -        |    :smiley:      |       -         |
+| D Day 14        |                |       -        |               |        -       |                   |        -         |
+| L Day 15        |      -         |       -        |   -            |       -        |          -        |                 |
+| M Day 16        |      -         |       😃        |                 |       -        |    :smiley:       |                |
+| X Day 17        |     :smiley:   |      😃          |                 |                |   :smiley:      |                |
+| J Day 18        |      -         |      -         |                 |       -        |         -       |       -         |
+| V Day 19        |      -         |       -        |                 |        -       |        -        |       -         |
+| S Day 20        |      -         |       -        |      -          |         -      |        -        |        -        |
+| D Day 21        |      -         |       -        |                 |          -     |        -        |          -      |
+| L Day 22        |                |       -        |                |                 |         -       |       -         |
+| M Day 23        |      -         |                |                 |                 |                |        -        |    
+| X Day 24        |                |        -       |       -         |                |                |        -        |
+| J Day 25        |                |                |                 |                |                 |                 |
 
