@@ -1,4 +1,4 @@
-# Niko Niko Calendar of team X
+# Niko Niko Calendar of team G5-52
 ## Introduction
 Some interesting links about what a Niko Niko calendar is and opinions about its use in software development:
 
@@ -34,17 +34,17 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
-| X Day 1 (19/04) |  :smiley:      |                 |                |                |     :smiley:      |       :smiley:    |
+| X Day 1 (19/04) |  :smiley:      |                 |   :smiley:     |                |     :smiley:      |       :smiley:    |
 | J Day 2         |      -         |      -         |       -         |       -         |       -         |        -        |
 | V Day 3         |       -        |       -        |       -         |       -         |        -        |        -        |
 | S Day 4         |        -       |       -       |        -        |       -         |         -        |        -        |
 | D Day 5         |        -       |       -        |                |       -         |         -        |        -        |
 | L Day 6         |     :smiley:   |       -        |       -         |       -         |        -         |       -         |
 | M Day 7         |      -         |       -        |      -        |       -         |        -         |       -         |
-| X Day 8         |                |                |               |                 |                  |                 |
+| X Day 8         |                |                |  :smiley:     |                 |                  |                 |
 | J Day 9         |      -         |       -        |  -            |                 |        -         |       -         |
 | V Day 10        |      -         |                |     -        |        -        |        -         |       -         |
-| S Day 11        |     -          |       -        |       -         |        -        |    :smiley:      |       -         |
+| S Day 11        |     -          |       -        |  :smiley:      |        -        |    :smiley:      |       -         |
 | D Day 12        |                |       -        |               |        -       |                   |        -         |
 | L Day 13        |      -         |       -        |   -            |       -        |          -        |                 |
 | M Day 14        |      -         |       -        |                 |       -        |    :smiley:       |                |
