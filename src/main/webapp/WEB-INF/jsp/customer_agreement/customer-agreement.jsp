@@ -18,9 +18,24 @@
             <h2>Servicios Asociados</h2>
 
             <p>
-                Comenzado el acuerdo de este contrato, los usuarios de la plataforma petclinic podrán enviar
-                tickets al soporte técnico de Petclinic y solicitar una resolución de incidencias al servicio de 
-                petclinic en caso de dificultades técnicas o problemas con el servicio que requieran la 
+                Comenzado el acuerdo de este contrato, los usuarios de la plataforma petclinic tendran acceso a la plataforma
+                como propietario de mascotas con el inicio de sesion que hayan introducido y podran acceder a los siguientes servicios:
+            </p>
+                <ul style="font-size:medium; font-weight: normal;">
+                    <li>
+                        Servicio de Hotel de Mascotas y Adopciones
+                    </li>
+                    <li>
+                        Servicio de Causas y Donaciones
+                    </li>
+                    <li>
+                        Servicio de Veterinaria
+                    </li>
+                </ul>
+                <br>
+                <p>
+                Además, todos los usuarios podrán enviar tickets al soporte técnico de Petclinic y solicitar una resolución de 
+                incidencias al servicio de petclinic en caso de dificultades técnicas o problemas con el servicio que requieran la 
                 atención del equipo de soporte de la plataforma Petclinic.
 
                 Adicionalmente, si el usuario posee el plan "Pro" de Petclinic, podrá solicitar los siguientes servicios:
@@ -31,7 +46,7 @@
                 </li>
                 <li>
                     Solicitar cambios y añadidos para la plataforma que pueden ser considerados a implementar 
-                    por el equipo y mejoren la experiencia del usuario.
+                    por el equipo y tengan como objetivo mejorar la experiencia del usuario.
                 </li>
             </ul>
             <br>
