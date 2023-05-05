@@ -27,7 +27,7 @@
 
             <p>
                 Comenzado el acuerdo de este contrato, los usuarios de la plataforma petclinic tendran acceso a la plataforma
-                como propietario de mascotas con el inicio de sesion que hayan introducido y podran acceder a los siguientes servicios:
+                como propietario de clínica con el inicio de sesión que hayan introducido y podran acceder a los siguientes servicios:
             </p>
                 <ul style="font-size:medium; font-weight: normal;">
                     <li>
