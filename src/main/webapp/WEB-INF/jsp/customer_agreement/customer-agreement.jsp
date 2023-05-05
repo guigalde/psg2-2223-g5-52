@@ -33,20 +33,18 @@
                     </li>
                 </ul>
                 <br>
-                <p>
+            <p>
                 Además, todos los usuarios podrán enviar tickets al soporte técnico de Petclinic y solicitar una resolución de 
                 incidencias al servicio de petclinic en caso de dificultades técnicas o problemas con el servicio que requieran la 
                 atención del equipo de soporte de la plataforma Petclinic.
 
-                Adicionalmente, si el usuario posee el plan "Pro" de Petclinic, podrá solicitar los siguientes servicios:
+                Adicionalmente, si el usuario posee el plan "Pro" de Petclinic, podrá solicitar cambios y añadidos para 
+                la plataforma que pueden ser considerados a implementar por el equipo y tengan como objetivo mejorar 
+                la experiencia del usuario.
             </p>
             <ul style="font-size:medium; font-weight: normal;">
                 <li>
-                    Solicitud de usuario (WIP)
-                </li>
-                <li>
-                    Solicitar cambios y añadidos para la plataforma que pueden ser considerados a implementar 
-                    por el equipo y tengan como objetivo mejorar la experiencia del usuario.
+                    
                 </li>
             </ul>
             <br>
