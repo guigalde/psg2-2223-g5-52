@@ -34,7 +34,7 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
-| L Day 1 (17/04) |                |       😐        |   :smiley:   |    :smiley:    |         -       |       -         |
+| L Day 1 (17/04) |    :smiley:            |       😐        |   :smiley:   |    :smiley:    |         -       |       -         |
 | M Day 2        |      -         |                |                 |                 |                |        -        |
 | X Day 3        |  :smiley:      |       😐          |   :smiley:     |      :smiley:  |     :smiley:     |    :smiley:    |
 | J Day 4         |      -         |      -         |       -         |       -         |       -         |        -        |
