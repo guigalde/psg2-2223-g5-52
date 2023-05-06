@@ -34,7 +34,7 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
-| L Day 1 (17/04) |    :smiley:            |       😐        |   :smiley:   |    :smiley:    |         -       |       -         |
+| L Day 1 (17/04) |    :smiley:    |       😐        |   :smiley:   |    :smiley:    |         -       |       -         |
 | M Day 2        |      -         |                |                 |                 |                |        -        |
 | X Day 3        |  :smiley:      |       😐          |   :smiley:     |      :smiley:  |     :smiley:     |    :smiley:    |
 | J Day 4         |      -         |      -         |       -         |       -         |       -         |        -        |
@@ -52,9 +52,9 @@ In the retrospective meeting, the team has a discussion about those results.
 | M Day 16        |      -         |       😃       |                 |   :smiley:     |    :smiley:       |                |
 | X Day 17        |     :smiley:   |      😃        | :monkey_face:   |     :smiley:  |   :smiley:      |                |
 | J Day 18        |      -         |      -         |    :smiley:     |       -        |    -             |       -         |
-| V Day 19        |      -         |       😃        |                 |        -       |     :smiley:     |       -         |
-| S Day 20        |      -         |       -        |      -          |         -      |     :smiley:    |        -        |
-| D Day 21        |      -         |       -        |                 |          -     |        -        |          -      |
+| V Day 19        |      -         |       😃        |                 |   :smiley:    |     :smiley:     |       -         |
+| S Day 20        |      -         |       -        |      -          |    :smiley:    |     :smiley:    |        -        |
+| D Day 21        |      -         |       -        |                 |          😐     |        -        |          -      |
 | L Day 22        |                |       -        |                |                 |         -       |       -         |
 | M Day 23        |      -         |                |                 |                 |                |        -        |    
 | X Day 24        |                |        -       |       -         |                |                |        -        |
