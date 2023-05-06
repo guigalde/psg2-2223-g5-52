@@ -52,8 +52,8 @@ In the retrospective meeting, the team has a discussion about those results.
 | M Day 16        |      -         |       😃       |                 |   :smiley:     |    :smiley:       |                |
 | X Day 17        |     :smiley:   |      😃        | :monkey_face:   |     :smiley:  |   :smiley:      |                |
 | J Day 18        |      -         |      -         |    :smiley:     |       -        |    -             |       -         |
-| V Day 19        |      -         |       😃        |                 |   :smiley:    |     :smiley:     |       -         |
-| S Day 20        |      -         |       -        |      -          |    :smiley:    |     :smiley:    |        -        |
+| V Day 19        |     :smiley:   |       😃        |                 |   :smiley:    |     :smiley:     |       -         |
+| S Day 20        |     :worried:  |       -        |      -          |    :smiley:    |     :smiley:    |        -        |
 | D Day 21        |      -         |       -        |                 |          😐     |        -        |          -      |
 | L Day 22        |                |       -        |                |                 |         -       |       -         |
 | M Day 23        |      -         |                |                 |                 |                |        -        |    
