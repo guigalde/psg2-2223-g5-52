@@ -51,11 +51,11 @@
                     </td>
                     <td>
                         <br>30.00 €/ año</br>
-                        <a href="#">Comprar ahora</a>
+                        <a href="<c:url value='/users/plan'/>">Comprar ahora</a>
                     </td>
                     <td>
                         <br>90.00 €/ año</br>
-                        <a href="#">Comprar ahora</a>
+                        <a href="<c:url value='/users/plan'/>">Comprar ahora</a>
                     </td>
                 </tr>
                 <tr>

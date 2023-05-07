@@ -28,6 +28,10 @@
             <th><fmt:message key="telephone"/></th>
             <td><c:out value="${owner.telephone}"/></td>
         </tr>
+        <tr>
+            <th>Plan</th>
+            <td><c:out value ="${owner.user.plan}"/></td>
+        </tr>
     </table>
 
     <spring:url value="{ownerId}/edit" var="editUrl">
