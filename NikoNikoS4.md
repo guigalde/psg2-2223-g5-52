@@ -50,9 +50,9 @@ In the retrospective meeting, the team has a discussion about those results.
 | D Day 14        |                |       -        |               |        -       |                   |        -         |
 | L Day 15        |      -         |       -        |   -            |       -        |          -        |                 |
 | M Day 16        |      -         |       😃       |                 |   :smiley:     |    :smiley:       |                |
-| X Day 17        |     :smiley:   |      😃        | :monkey_face:   |     :smiley:  |   :smiley:      |                |
+| X Day 17        |     :smiley:   |      😃        |   :smiley:      |     :smiley:  |   :smiley:      |                |
 | J Day 18        |      -         |      -         |    :smiley:     |       -        |    -             |       -         |
-| V Day 19        |     :smiley:   |       😃        |                 |   :smiley:    |     :smiley:     |       -         |
+| V Day 19        |     :smiley:   |       😃        |   :smiley:        |   :smiley:    |     :smiley:     |       -         |
 | S Day 20        |     :worried:  |       -        |      -          |    :smiley:    |     :smiley:    |        -        |
 | D Day 21        |      -         |       -        |                 |          😐     |        -        |          -      |
 | L Day 22        |                |       -        |                |                 |         -       |       -         |
