@@ -19,6 +19,7 @@ package org.springframework.samples.petclinic.user;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.trace.http.HttpTrace.Principal;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -61,5 +62,16 @@ public class UserService {
 	public Optional<User> getLoggedUser(){
 		UserDetails userDetails=(UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return userRepository.findByUsername(userDetails.getUsername());
+	}
+
+	public User currentUser(Principal principal){
+		Optional<User> res = null;
+		
+		if(principal!=null)
+		 	res = findUser(principal.getName());
+		if(res!=null && res.isPresent()) 
+			return res.get();
+
+		else return null;
 	}
 }

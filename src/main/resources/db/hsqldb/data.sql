@@ -1,17 +1,17 @@
 -- One admin user, named admin1 with passwor 4dm1n and authority admin
-INSERT INTO users(username,password,enabled) VALUES ('admin1','4dm1n',TRUE);
+INSERT INTO users(username,password,enabled,plan) VALUES ('admin1','4dm1n',TRUE,'PRO');
 INSERT INTO authorities(id,username,authority) VALUES (1,'admin1','admin');
 -- One owner user, named owner1 with passwor 0wn3r
-INSERT INTO users(username,password,enabled) VALUES ('owner1','0wn3r',TRUE),
-('owner2','0wn3r',TRUE),
-('owner3','0wn3r',TRUE),
-('owner4','0wn3r',TRUE),
-('owner5','0wn3r',TRUE),
-('owner6','0wn3r',TRUE),
-('owner7','0wn3r',TRUE),
-('owner8','0wn3r',TRUE),
-('owner9','0wn3r',TRUE),
-('owner10','0wn3r',TRUE);
+INSERT INTO users(username,password,enabled,plan) VALUES ('owner1','0wn3r',TRUE,'BASIC'),
+('owner2','0wn3r',TRUE,'BASIC'),
+('owner3','0wn3r',TRUE,'BASIC'),
+('owner4','0wn3r',TRUE,'BASIC'),
+('owner5','0wn3r',TRUE,'BASIC'),
+('owner6','0wn3r',TRUE,'BASIC'),
+('owner7','0wn3r',TRUE,'BASIC'),
+('owner8','0wn3r',TRUE,'BASIC'),
+('owner9','0wn3r',TRUE,'BASIC'),
+('owner10','0wn3r',TRUE,'BASIC');
 INSERT INTO authorities(id,username,authority) VALUES (2,'owner1','owner'),
 (3,'owner2','owner'),
 (4,'owner3','owner'),
@@ -24,7 +24,7 @@ INSERT INTO authorities(id,username,authority) VALUES (2,'owner1','owner'),
 (11,'owner10','owner');
 
 -- One vet user, named vet1 with passwor v3t
-INSERT INTO users(username,password,enabled) VALUES ('vet1','v3t',TRUE);
+INSERT INTO users(username,password,enabled,plan) VALUES ('vet1','v3t',TRUE,'BASIC');
 INSERT INTO authorities(id,username,authority) VALUES (12,'vet1','veterinarian');
 
 INSERT INTO vets(id, first_name,last_name) VALUES (1, 'James', 'Carter');
