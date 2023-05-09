@@ -16,14 +16,17 @@
 package org.springframework.samples.petclinic.pet;
 
 import java.util.Collection;
+import java.util.Map;
 
 import javax.validation.Valid;
+
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
+import org.springframework.samples.petclinic.user.PricingPlan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -57,8 +60,9 @@ public class PetController {
 	}
 
 	@ModelAttribute("types")
-	public Collection<PetType> populatePetTypes() {
-		return this.petService.findPetTypes();
+	public Collection<PetType> populatePetTypes(Map<String,Object> model) {
+		PricingPlan plan = (PricingPlan) model.get("currentUserPlan");
+		return this.petService.findPetTypesForPlan(plan);
 	}
 
 	@ModelAttribute("owner")
@@ -89,6 +93,12 @@ public class PetController {
 	@GetMapping(value = "/pets/new")
 	public String initCreationForm(Owner owner, ModelMap model) {
 		Pet pet = new Pet();
+		PricingPlan plan = (PricingPlan) model.get("currentUserPlan");
+		Integer numberOfPets = petService.findPetsByOwnerId(owner.getId()).size();
+		if(plan != null && numberOfPets >= plan.pets) {
+			model.put("message","Has alcanzado el límite de mascotas con el plan " + plan.getName());
+			return "welcome";
+		}
 		owner.addPet(pet);
 		model.put("pet", pet);
 		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;

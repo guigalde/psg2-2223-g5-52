@@ -15,11 +15,13 @@
  */
 package org.springframework.samples.petclinic.pet;
 
+import java.time.LocalDate;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
+import org.springframework.samples.petclinic.user.PricingPlan;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -96,10 +98,25 @@ public class PetService {
         petRepository.deleteById(id);
     }
 
-
+	@Transactional(readOnly = true)
 	public Collection<Visit> findVisitsByPetId(int petId) {
 		return visitRepository.findByPetId(petId);
 	}
 
+	@Transactional(readOnly = true)
+	public Collection<Visit> findVisitsOnMonthByPetId(int petId, LocalDate date) {
+		return visitRepository.findVisitsOnMonthByPetId(petId, date.getMonthValue(), date.getYear());
+	}
+
+	@Transactional(readOnly = true)
+	public Collection<Pet> findPetsByOwnerId(int ownerId) {
+		return petRepository.findByOwnerId(ownerId);
+	}
+
+	@Transactional(readOnly = true) 
+	public Collection<PetType> findPetTypesForPlan(PricingPlan plan) {
+		return petRepository.findPetTypesForPlan(plan);
+	}
+	
 
 }

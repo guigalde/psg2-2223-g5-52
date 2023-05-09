@@ -100,6 +100,10 @@
 												<a href="<c:url value="/logout" />"
 													class="btn btn-primary btn-block btn-sm"><fmt:message key="logout"/></a>
 											</p>
+											<p class="text-left">
+												<a href="<c:url value="/users/plan" />" 
+												class="btn btn-primary btn-block btn-sm">Planes</a>
+											</p>
 										</div>
 									</div>
 								</div>

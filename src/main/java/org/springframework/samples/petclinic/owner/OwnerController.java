@@ -82,6 +82,7 @@ public class OwnerController {
 		}
 		else {
 			//creating owner, user and authorities
+			owner.getUser().setPlan(PricingPlan.BASIC);
 			this.ownerService.saveOwner(owner);
 			owner.getUser().setPlan(PricingPlan.BASIC);
 

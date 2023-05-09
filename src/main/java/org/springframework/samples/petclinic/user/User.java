@@ -29,6 +29,10 @@ public class User{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private Set<Authorities> authorities;
 
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    PricingPlan plan;
+
     public void onDeleteSetNull(){
         this.authorities=null;
         this.enabled=false;
