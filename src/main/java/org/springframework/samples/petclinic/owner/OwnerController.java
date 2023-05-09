@@ -84,6 +84,7 @@ public class OwnerController {
 			//creating owner, user and authorities
 			owner.getUser().setPlan(PricingPlan.BASIC);
 			this.ownerService.saveOwner(owner);
+			owner.getUser().setPlan(PricingPlan.BASIC);
 
 			return "redirect:/owners/" + owner.getId();
 		}

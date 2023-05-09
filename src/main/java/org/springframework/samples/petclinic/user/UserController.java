@@ -72,6 +72,7 @@ public class UserController {
 			//creating owner, user, and authority
 			owner.getUser().setPlan(PricingPlan.BASIC);
 			this.ownerService.saveOwner(owner);
+			owner.getUser().setPlan(PricingPlan.BASIC);
 			return "redirect:/";
 		}
 	}

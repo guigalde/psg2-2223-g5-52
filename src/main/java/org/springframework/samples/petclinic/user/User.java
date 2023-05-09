@@ -39,4 +39,10 @@ public class User{
         this.password=null;
         this.username=null;
     }
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    PricingPlan plan;
+
+    
 }
