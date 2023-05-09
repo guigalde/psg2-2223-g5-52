@@ -21,6 +21,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
+import org.springframework.samples.petclinic.user.PricingPlan;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -76,11 +77,17 @@ public class VisitController {
 
 	// Spring MVC calls method loadPetWithVisit(...) before processNewVisitForm is called
 	@PostMapping(value = "/owners/{ownerId}/pets/{petId}/visits/new")
-	public String processNewVisitForm(@Valid Visit visit, BindingResult result) {
+	public String processNewVisitForm(@Valid Visit visit, Map<String, Object> model,BindingResult result) {
 		if (result.hasErrors()) {
 			return "pets/createOrUpdateVisitForm";
 		}
 		else {
+			PricingPlan plan = (PricingPlan) model.get("currentUserPlan");
+			int visitsCreated = petService.findVisitsOnMonthByPetId(visit.getPet().getId(), visit.getDate()).size();
+			if(plan != null && visitsCreated >=plan.visitsPerMonth ) {
+				model.put("message","Se ha alcanzado el límite de visitas mensuales con el plan " + plan.getName());
+				return "welcome";
+			}
 			this.petService.saveVisit(visit);
 			return "redirect:/owners/{ownerId}";
 		}
