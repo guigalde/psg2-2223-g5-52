@@ -81,7 +81,7 @@
 						data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span>
 							<strong><sec:authentication property="name" /></strong> <span
 							class="glyphicon glyphicon-chevron-down"></span>
-							<strong><sec:authentication property="plan" /></strong>
+							<strong><c:out value="${currentUserPlan}"/></strong>
 					</a>
 						<ul class="dropdown-menu">
 							<li>
