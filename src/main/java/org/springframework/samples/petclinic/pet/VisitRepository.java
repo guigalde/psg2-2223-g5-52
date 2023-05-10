@@ -16,6 +16,7 @@
 package org.springframework.samples.petclinic.pet;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.repository.CrudRepository;
@@ -37,4 +38,9 @@ public interface VisitRepository extends CrudRepository<Visit, Integer> {
 
 	List<Visit> findByPetId(Integer petId);
 
+    default List<Visit> findVisitsOnMonthByPetId(int id,int month,int year) {
+        List<Visit> visits = findByPetId(id);
+        return visits.stream().filter(visit -> visit.getDate().getMonthValue() == month && 
+            visit.getDate().getYear() == year).collect(Collectors.toList());
+    }
 }

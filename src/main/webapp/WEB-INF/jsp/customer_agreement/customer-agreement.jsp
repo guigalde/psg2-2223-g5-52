@@ -81,11 +81,11 @@
                     </td>
                     <td>
                         <br>30.00 €/ año</br>
-                        <a href="#">Comprar ahora</a>
+                        <a href="<c:url value='/users/plan'/>">Comprar ahora</a>
                     </td>
                     <td>
                         <br>90.00 €/ año</br>
-                        <a href="#">Comprar ahora</a>
+                        <a href="<c:url value='/users/plan'/>">Comprar ahora</a>
                     </td>
                 </tr>
                 <tr>
@@ -131,6 +131,24 @@
                     <td>Todos los tipos</td>
                 </tr>
                 <tr>
+                    <td>Funcionalidad de hotel para mascotas</td>
+                    <td><br><i class="fas fa-times"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                </tr>
+                <tr>
+                    <td>Notificaciones por SMS para visitas</td>
+                    <td><br><i class="fas fa-times"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                </tr>
+                <tr>
+                    <td>Actualización meteorológica diaria por SMS</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
                     <td>Soporte a peticiones de usuario</td>
                     <td><i class="fas fa-times"></i></td>
                     <td><i class="fas fa-times"></i></td>
@@ -143,7 +161,7 @@
                     <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
-                    <td>Disponibilidad del soporte</td>
+                    <td>Disponibilidad del soporte personal</td>
                     <td><i class="fas fa-times"></i></td>
                     <td><i class="fas fa-times"></i></td>
                     <td> 9:00 a 21:00 de lunes a viernes</td>
@@ -154,10 +172,54 @@
                     <td>95%</td>
                     <td>99%</td>
                 </tr>
+                <tr>
+                    <td>
+                        <br>TTO</br>
+                        <small style="font-size: 12px; font-weight: 400;">Tiempo de asignación a un miembro del equipo de soporte</small>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 48 horas</p>
+                        <p>Prioridad media: 24 horas</p>
+                        <p>Prioridad alta: 12 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 36 horas</p>
+                        <p>Prioridad media: 18 horas</p>
+                        <p>Prioridad alta: 9 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 24 horas</p>
+                        <p>Prioridad media: 12 horas</p>
+                        <p>Prioridad alta: 6 horas</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>TTR</br>
+                        <small style="font-size: 12px; font-weight: 400;">Tiempo de resolución de incidentes</small>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 900 horas</p>
+                        <p>Prioridad media: 450 horas</p>
+                        <p>Prioridad alta: 225 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 672 horas</p>
+                        <p>Prioridad media: 336 horas</p>
+                        <p>Prioridad alta: 168 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 504 horas</p>
+                        <p>Prioridad media: 252 horas</p>
+                        <p>Prioridad alta: 126 horas</p>
+                    </td>
+                </tr>
             </table>
             <p>
                 El soporte ofrecido a los usuarios del plan pro se apoya en un chat directo con nuestro equipo de soporte y una línea telefónica en el horario establecido anteriormente.
+                Los usuarios de otros planes tendrán soporte a incidentes mediante el portal
             </p>
+            <br></br>
         </li>
         
         <li>
@@ -180,19 +242,12 @@
                     <h3 style="font-size: large">Compromiso de servicio</h3>
 
                     <p>
-                        PSG2-2223-G5-52 se compromete en la medida de lo posible a que el Tiempo Total de Asignación desde que se 
-                        recibe una petición hasta que se asigna a un trabajador para su solución ("TTO") sea menor a dos horas. 
+                        PSG2-2223-G5-52 se compromete en la medida de lo posible a que el servicio tenga Tiempo Total de Asignación 
+                        desde que se recibe una petición hasta que se asigna a un miembro del equipo de soporte para su solución ("TTO") 
+                        dependiendo del nivel de prioridad y del plan del usuario.
                     </p>
 
-                    <br> <br>
-
-                    <p>
-                        Además, la empresa también se compromete a que el servicio tenga un Tiempo de Respuesta de la Resolución ("TTR")
-                         para las incidencias con el sitio web dependerá del nivel de prioridad.
-                    </p>
-
-                    <br> 
-
+                    <br>
                     <p>Para proporcionar una respuesta eficiente a las incidencias se establecen tres niveles de prioridad:</p>
 
                     <ul style="font-size:large; font-weight: normal;">
@@ -211,20 +266,210 @@
                     </ul>
 
                     <br>
+                    <p>Así, en la siguiente tabla se expresa el TTO al que se compromete la empresa:</p>
 
+                    <table class="table table-striped" border="2">
+                        <tr>
+                            <tr style="font-size: large" >
+                                <td rowspan="3" style="text-align: center;">
+                                    Basic
+                                </td>
+                                <td>
+                                    Prioridad baja
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 48 horas siguientes
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad media
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 24 horas siguientes
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad alta
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 12 horas siguientes
+                                </td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <tr style="font-size: large" >
+                                <td rowspan="3" style="text-align: center;">
+                                    Advanced
+                                </td>
+                                <td>
+                                    Prioridad baja
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 36 horas siguientes
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad media
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 18 horas siguientes
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad alta
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 9 horas siguientes
+                                </td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <tr style="font-size: large" >
+                                <td rowspan="3" style="text-align: center;">
+                                    Pro
+                                </td>
+                                <td>
+                                    Prioridad baja
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 24 horas siguientes
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad media
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 12 horas siguientes
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad alta
+                                </td>
+                                <td>
+                                    Se asignará la petición a un miembro del equipo de soporte en las 6 horas siguientes
+                                </td>
+                            </tr>
+                        </tr>
+                    </table>
+
+                    <br> <br>
+
+                    <p>
+                        Además, la empresa también se compromete a que el servicio tenga un Tiempo de Respuesta de la Resolución ("TTR")
+                         para las incidencias con el sitio web dependerá del nivel de prioridad y del plan del usuario.
+                    </p>
+
+                    <br> 
+
+                    <table class="table table-striped" border="2" >
+                        <tr>
+                            <tr style="font-size: large" >
+                                <td rowspan="3" style="text-align: center;">
+                                    Basic
+                                </td>
+                                <td>
+                                    Prioridad baja
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 900 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad media
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 450 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad alta
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 225 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <tr style="font-size: large" >
+                                <td rowspan="3" style="text-align: center;">
+                                    Advanced
+                                </td>
+                                <td>
+                                    Prioridad baja
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 672 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad media
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 336 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad alta
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 168 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <tr style="font-size: large" >
+                                <td rowspan="3" style="text-align: center;">
+                                    Pro
+                                </td>
+                                <td>
+                                    Prioridad baja
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 504 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad media
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 252 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                            <tr style="font-size: large" >
+                                <td>
+                                    Prioridad alta
+                                </td>
+                                <td>
+                                    Se le dará solución a la petición en las 126 horas siguientes a su asignación
+                                </td>
+                            </tr>
+                        </tr>
+                    </table>
+                    <br> 
                     <p>En caso de incumplimiento, se aplicarán las siguientes medidas:</p>
                     
                     <ul style="font-size:large; font-weight: normal;">
                         <li>
-                            Prioridad baja: Se proporcionará una solución permanente en las 672 horas siguientes. 
+                            Prioridad baja: 
                             No se dará ninguna compensación.
                         </li>
                         <li>
-                            Prioridad media: Se proporcionará una solución permanente en las 336 horas siguientes. 
+                            Prioridad media: 
                             Se dará una compensación equivalente al 10% de Créditos de Servicio en caso de incumplimiento.
                         </li>
                         <li>
-                            Prioridad alta: Se proporcionará una solución permanente en las 168 horas siguientes. 
+                            Prioridad alta: 
                             Se dará una compensación equivalente al 20% de Créditos de Servicio en caso de incumplimiento.
                         </li>
                     </ul>
@@ -233,7 +478,7 @@
 
                     <p>
                         Asimismo, la empresa se compromete en la medida de lo posible a que el soporte al cliente 
-                        perdure de 9:00 a 21:00 de lunes a viernes para los usuarios que tengan el plan PRO.
+                        perdure de 9:00 a 21:00 de lunes a viernes para los usuarios que tengan el plan Pro.
                     </p>
 
                     <br> <br>
@@ -292,8 +537,8 @@
         </li>
         <br>
         <br>
-        <h6>Última fecha de modificación: 03/05/2023</h6>
-        <h6>Nº de versión: 1.1</h6>
+        <h6>Última fecha de modificación: 10/05/2023</h6>
+        <h6>Nº de versión: 1.2</h6>
     </ol>
     
 

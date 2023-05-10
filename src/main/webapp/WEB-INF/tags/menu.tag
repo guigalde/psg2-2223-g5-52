@@ -41,7 +41,7 @@
 					<span><fmt:message key="veterinarians"/></span>
 				</petclinic:menuItem>
 
-				<petclinic:menuItem active="${name eq 'Causas'}" url="/cause"
+				<petclinic:menuItem active="${name eq 'causes'}" url="/cause"
 					title="causes">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 					<span><fmt:message key="causes"/></span>
@@ -78,9 +78,10 @@
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span>�
+						data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span>
 							<strong><sec:authentication property="name" /></strong> <span
 							class="glyphicon glyphicon-chevron-down"></span>
+							<strong><sec:authentication property="plan" /></strong>
 					</a>
 						<ul class="dropdown-menu">
 							<li>
@@ -98,6 +99,10 @@
 											<p class="text-left">
 												<a href="<c:url value="/logout" />"
 													class="btn btn-primary btn-block btn-sm"><fmt:message key="logout"/></a>
+											</p>
+											<p class="text-left">
+												<a href="<c:url value="/users/plan" />" 
+												class="btn btn-primary btn-block btn-sm">Planes</a>
 											</p>
 										</div>
 									</div>
