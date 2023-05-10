@@ -57,6 +57,6 @@ In the retrospective meeting, the team has a discussion about those results.
 | D Day 21        |      -         |       -        |                 |          😐     |        -        |          -      |
 | L Day 22        |                |       -        |                |                 |         -       |       -         |
 | M Day 23        |      -         |                |     :smiley:    |                 |                |        -        |    
-| X Day 24        |                |        -       |       -         |                |                |        -        |
+| X Day 24        |                |        -       |    :smiley:     |                |                |        -        |
 | J Day 25        |                |                |                 |                |                 |                 |
 
