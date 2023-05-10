@@ -28,6 +28,10 @@
             <th><fmt:message key="telephone"/></th>
             <td><c:out value="${owner.telephone}"/></td>
         </tr>
+        <tr>
+            <th>Recibir información meteorológica via SMS</th>
+            <td><input type="checkbox" name="" vaue=""></td>
+        </tr>
     </table>
 
     <spring:url value="{ownerId}/edit" var="editUrl">
