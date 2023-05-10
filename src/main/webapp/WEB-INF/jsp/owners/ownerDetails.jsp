@@ -29,8 +29,12 @@
             <td><c:out value="${owner.telephone}"/></td>
         </tr>
         <tr>
+            <th>Recibir información meteorológica via SMS</th>
+            <td><input type="checkbox" name="" vaue=""></td>
+
             <th>Plan</th>
             <td><c:out value ="${owner.user.plan}"/></td>
+
         </tr>
     </table>
 
@@ -74,6 +78,7 @@
                             <th><fmt:message key="visitDate"/></th>
                             <th><fmt:message key="description"/></th>
                             <th><fmt:message key="delete"/></th>
+                            <th>Notificación por SMS</th>
                         </tr>
                         </thead>
                         <c:forEach var="visit" items="${pet.visits}">
@@ -85,6 +90,7 @@
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </a>
                                 </td>
+                                <td><input type="checkbox" name="" vaue=""></td>
                             </tr>
                         </c:forEach>
                         <tr>
