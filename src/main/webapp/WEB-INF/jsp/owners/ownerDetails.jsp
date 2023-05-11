@@ -83,9 +83,11 @@
                             <th><fmt:message key="delete"/></th>
                             <c:if test="${owner.user.plan eq 'PRO'}">
                                 <th>Notificación por SMS</th>
+                                <td><input type="checkbox" name="" vaue=""></td>
                             </c:if>
                             <c:if test="${owner.user.plan eq 'ADVANCED'}">
                                 <th>Notificación por SMS</th>
+                                <td><input type="checkbox" name="" vaue=""></td>
                             </c:if>
                         </tr>
                         </thead>
@@ -117,6 +119,7 @@
                                 <a href="${fn:escapeXml(visitUrl)}"><fmt:message key="addVisit"/></a>
                             </td>
                             <td valign="top">
+                                <c:if test="${owner.user.plan eq 'PRO'}">
                                 <td>
                                     <spring:url value="/owners/{ownerId}/pets/{petId}/booking/new" var="visitUrl">
                                         <spring:param name="ownerId" value="${owner.id}"/>
@@ -124,6 +127,16 @@
                                     </spring:url>
                                     <a class="btn btn-default" href="${fn:escapeXml(visitUrl)}"><fmt:message key="addBooking"/></a> 
                                 </td>
+                                </c:if>
+                                <c:if test="${owner.user.plan eq 'ADVANCED'}">
+                                <td>
+                                    <spring:url value="/owners/{ownerId}/pets/{petId}/booking/new" var="visitUrl">
+                                        <spring:param name="ownerId" value="${owner.id}"/>
+                                        <spring:param name="petId" value="${pet.id}"/>
+                                    </spring:url>
+                                    <a class="btn btn-default" href="${fn:escapeXml(visitUrl)}"><fmt:message key="addBooking"/></a> 
+                                </td>
+                                </c:if>
                                 <c:if test="${loggedOwner.id == owner.id}">
                                 <td>
                                     <spring:url value="/owners/{ownerId}/pets/{petId}/adoption/new" var="adoptionUrl">
