@@ -82,7 +82,6 @@
 							<span class="glyphicon glyphicon-user icon-size"></span>
 							<strong><c:out value="${currentUserPlan.name}"/></strong> 
 							<span class="glyphicon glyphicon-chevron-down"></span>
-							
 					</a>
 						<ul class="dropdown-menu">
 							<li>
