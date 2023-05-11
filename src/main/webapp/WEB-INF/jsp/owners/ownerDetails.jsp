@@ -100,7 +100,12 @@
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </a>
                                 </td>
-                                <td><input type="checkbox" name="" vaue=""></td>
+                                <c:if test="${owner.user.plan eq 'ADVANCED'}">
+                                    <td><input type="checkbox" name="" vaue=""></td>
+                                </c:if>
+                                <c:if test="${owner.user.plan eq 'PRO'}">
+                                    <td><input type="checkbox" name="" vaue=""></td>
+                                </c:if>
                             </tr>
                         </c:forEach>
                         <tr>
