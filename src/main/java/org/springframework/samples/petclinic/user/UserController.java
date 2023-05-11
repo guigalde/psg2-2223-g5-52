@@ -44,6 +44,7 @@ public class UserController {
 
 	private static final String VIEWS_OWNER_CREATE_FORM = "users/createOwnerForm";
 	private static final String UPDATE_PLAN_FORM = "users/updatePlanForm";
+	private static final String PROFILE_VIEW = "users/userProfile";
 	private final OwnerService ownerService;
 	private final UserService userService;
 
@@ -103,6 +104,18 @@ public class UserController {
 			this.userService.saveUser(loggedUser);
 			return new ModelAndView("redirect:/");
 		}
+	}
+
+	@GetMapping(value = "/users/profile")
+	public String getUserProfile(Map<String, Object> model) {
+		List<PricingPlan> plans = List.of(PricingPlan.BASIC,PricingPlan.ADVANCED,PricingPlan.PRO);
+		Optional<User> optUser = userService.getLoggedUser();
+		User loggedUser = optUser.get();
+		Owner loggedOwner = ownerService.findOwnerByUsername(loggedUser.getUsername());
+		model.put("loggedUser", loggedUser);
+		model.put("loggedOwner", loggedOwner);
+		model.put("plans", plans);
+		return PROFILE_VIEW;
 	}
 
 }
