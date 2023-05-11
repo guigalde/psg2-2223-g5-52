@@ -21,6 +21,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerService;
@@ -30,6 +31,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Juergen Hoeller
@@ -42,6 +44,7 @@ public class UserController {
 
 	private static final String VIEWS_OWNER_CREATE_FORM = "users/createOwnerForm";
 	private static final String UPDATE_PLAN_FORM = "users/updatePlanForm";
+	private static final String PROFILE_VIEW = "users/userProfile";
 	private final OwnerService ownerService;
 	private final UserService userService;
 
@@ -87,15 +90,32 @@ public class UserController {
 	}
 
 	@PostMapping(value="/users/plan")
-	public String processUpdatePlanForm(@Valid User user, Map<String,Object> model, BindingResult br) {
+	public ModelAndView processUpdatePlanForm(@Valid User user, BindingResult br) {
 		if(br.hasErrors()) {
-			return VIEWS_OWNER_CREATE_FORM;
+			ModelAndView model = new ModelAndView(UPDATE_PLAN_FORM, br.getModel());
+			List<PricingPlan> plans = List.of(PricingPlan.BASIC,PricingPlan.ADVANCED,PricingPlan.PRO);
+			Optional<User> loggedUser = userService.getLoggedUser();
+			model.addObject("loggedUser", loggedUser.get());
+			model.addObject("plans", plans);
+			return model;
 		} else {
 			User loggedUser = userService.getLoggedUser().get();
 			loggedUser.setPlan(user.getPlan());
 			this.userService.saveUser(loggedUser);
-			return "redirect:/";
+			return new ModelAndView("redirect:/");
 		}
+	}
+
+	@GetMapping(value = "/users/profile")
+	public String getUserProfile(Map<String, Object> model) {
+		List<PricingPlan> plans = List.of(PricingPlan.BASIC,PricingPlan.ADVANCED,PricingPlan.PRO);
+		Optional<User> optUser = userService.getLoggedUser();
+		User loggedUser = optUser.get();
+		Owner loggedOwner = ownerService.findOwnerByUsername(loggedUser.getUsername());
+		model.put("loggedUser", loggedUser);
+		model.put("loggedOwner", loggedOwner);
+		model.put("plans", plans);
+		return PROFILE_VIEW;
 	}
 
 }

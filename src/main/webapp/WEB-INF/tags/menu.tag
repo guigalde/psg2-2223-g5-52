@@ -144,11 +144,13 @@
 					<li><a href="<c:url value="/users/new" />"><fmt:message key="register"/></a></li>
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span>
-							<strong><sec:authentication property="name" /></strong> <span
-							class="glyphicon glyphicon-chevron-down"></span>
-							<strong><c:out value="${currentUserPlan}"/></strong>
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<strong><sec:authentication property="name" /></strong> 
+							<span class="glyphicon glyphicon-user icon-size"></span>
+							<strong><c:out value="${currentUserPlan.name}"/></strong> 
+							<span class="glyphicon glyphicon-chevron-down"></span>
+
 					</a>
 						<ul class="dropdown-menu">
 							<li>
@@ -170,6 +172,10 @@
 											<p class="text-left">
 												<a href="<c:url value="/users/plan" />" 
 												class="btn btn-primary btn-block btn-sm">Planes</a>
+											</p>
+											<p class="text-left">
+												<a href="<c:url value="/users/profile" />" 
+												class="btn btn-primary btn-block btn-sm">Perfil</a>
 											</p>
 										</div>
 									</div>

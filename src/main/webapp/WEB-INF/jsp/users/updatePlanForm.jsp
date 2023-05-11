@@ -87,6 +87,24 @@
                     <td>Todos los tipos</td>
                 </tr>
                 <tr>
+                    <td>Funcionalidad de hotel para mascotas</td>
+                    <td><br><i class="fas fa-times"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                </tr>
+                <tr>
+                    <td>Notificaciones por SMS para visitas</td>
+                    <td><br><i class="fas fa-times"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                    <td><br><i class="fas fa-check"></i></br></td>
+                </tr>
+                <tr>
+                    <td>Actualización meteorológica diaria por SMS</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
                     <td>Soporte a peticiones de usuario</td>
                     <td><i class="fas fa-times"></i></td>
                     <td><i class="fas fa-times"></i></td>
@@ -99,7 +117,7 @@
                     <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
-                    <td>Disponibilidad del soporte</td>
+                    <td>Disponibilidad del soporte personal</td>
                     <td><i class="fas fa-times"></i></td>
                     <td><i class="fas fa-times"></i></td>
                     <td> 9:00 a 21:00 de lunes a viernes</td>
@@ -109,6 +127,48 @@
                     <td>90%</td>
                     <td>95%</td>
                     <td>99%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>TTO</br>
+                        <small style="font-size: 12px; font-weight: 400;">Tiempo de asignación a un miembro del equipo de soporte</small>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 48 horas</p>
+                        <p>Prioridad media: 24 horas</p>
+                        <p>Prioridad alta: 12 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 36 horas</p>
+                        <p>Prioridad media: 18 horas</p>
+                        <p>Prioridad alta: 9 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 24 horas</p>
+                        <p>Prioridad media: 12 horas</p>
+                        <p>Prioridad alta: 6 horas</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>TTR</br>
+                        <small style="font-size: 12px; font-weight: 400;">Tiempo de resolución de incidentes</small>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 900 horas</p>
+                        <p>Prioridad media: 450 horas</p>
+                        <p>Prioridad alta: 225 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 672 horas</p>
+                        <p>Prioridad media: 336 horas</p>
+                        <p>Prioridad alta: 168 horas</p>
+                    </td>
+                    <td>
+                        <p>Prioridad baja: 504 horas</p>
+                        <p>Prioridad media: 252 horas</p>
+                        <p>Prioridad alta: 126 horas</p>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
