@@ -40,9 +40,6 @@ public class User{
         this.username=null;
     }
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    PricingPlan plan;
 
     
 }
