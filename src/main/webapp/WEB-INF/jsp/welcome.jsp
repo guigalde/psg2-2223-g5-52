@@ -12,6 +12,7 @@
         <div class="col-md-12">
             <spring:url value="/resources/images/pug.png" htmlEscape="true" var="petsImage"/>
             <img class="img-responsive" src="${petsImage}"/>
+            <br>
             <a class="btn btn-default" href="${changelogLink}">Registro de Cambios</a>
         </div>
     </div>
