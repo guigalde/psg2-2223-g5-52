@@ -545,8 +545,8 @@
         </li>
         <br>
         <br>
-        <h6>Última fecha de modificación: 10/05/2023</h6>
-        <h6>Nº de versión: 1.2</h6>
+        <h6>Última fecha de modificación: 15/05/2023</h6>
+        <h6>Nº de versión: 1.3</h6>
     </ol>
     
 
