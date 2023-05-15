@@ -248,20 +248,28 @@
                     </p>
 
                     <br>
-                    <p>Para proporcionar una respuesta eficiente a las incidencias se establecen tres niveles de prioridad:</p>
+                    <p>Para proporcionar una respuesta eficiente a las incidencias y las peticiones se establecen 
+                        tres niveles de prioridad:
+                    </p>
 
                     <ul style="font-size:large; font-weight: normal;">
                         <li>
                             Prioridad baja: Incidencias que ocurren a un número reducido de usuarios, 
-                            que causen molestia o producen fallos en la visualización de la página.
+                            que causen molestia o producen fallos en la visualización de la página. En el caso de las peticiones,
+                            se asigna baja prioridad a aquellas que supongan cambios importantes tras analizar la viabilidad de la 
+                            petición.
                         </li>
                         <li>
                             Prioridad media: Incidencias que ocurren a un número moderado de usuarios, que impidan el acceso 
-                            a ciertas características del servicio o que pueda provocar pérdidas de datos.
+                            a ciertas características del servicio o que pueda provocar pérdidas de datos. En el caso de las peticiones,
+                            se asigna prioridad media a aquellas que supongan cambios notables tras analizar la viabilidad de la 
+                            petición.
                         </li>
                         <li>
                             Prioridad alta: Incidencias que ocurren a un número elevado de usuarios, que impidan el acceso al 
-                            servicio en su totalidad o que pueda provocar la pérdida de todos los datos del servicio.
+                            servicio en su totalidad o que pueda provocar la pérdida de todos los datos del servicio. 
+                            En el caso de las peticiones,se asigna baja prioridad a aquellas que supongan cambios leves 
+                            tras analizar la viabilidad de la petición.
                         </li>
                     </ul>
 
@@ -362,7 +370,7 @@
 
                     <p>
                         Además, la empresa también se compromete a que el servicio tenga un Tiempo de Respuesta de la Resolución ("TTR")
-                         para las incidencias con el sitio web dependerá del nivel de prioridad y del plan del usuario.
+                         para las incidencias y las peticiones con el sitio web dependerá del nivel de prioridad y del plan del usuario.
                     </p>
 
                     <br> 
