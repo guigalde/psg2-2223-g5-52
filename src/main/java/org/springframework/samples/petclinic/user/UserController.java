@@ -15,7 +15,9 @@
  */
 package org.springframework.samples.petclinic.user;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -39,12 +41,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class UserController {
 
 	private static final String VIEWS_OWNER_CREATE_FORM = "users/createOwnerForm";
-
+	private static final String UPDATE_PLAN_FORM = "users/updatePlanForm";
 	private final OwnerService ownerService;
+	private final UserService userService;
 
 	@Autowired
-	public UserController(OwnerService clinicService) {
+	public UserController(OwnerService clinicService,  UserService userService) {
 		this.ownerService = clinicService;
+		this.userService = userService;
 	}
 
 	@InitBinder
@@ -66,7 +70,30 @@ public class UserController {
 		}
 		else {
 			//creating owner, user, and authority
+			owner.getUser().setPlan(PricingPlan.BASIC);
 			this.ownerService.saveOwner(owner);
+			owner.getUser().setPlan(PricingPlan.BASIC);
+			return "redirect:/";
+		}
+	}
+
+	@GetMapping(value = "/users/plan")
+	public String getUpdatePlanForm(Map<String, Object> model) {
+		List<PricingPlan> plans = List.of(PricingPlan.BASIC,PricingPlan.ADVANCED,PricingPlan.PRO);
+		Optional<User> loggedUser = userService.getLoggedUser();
+		model.put("loggedUser", loggedUser.get());
+		model.put("plans", plans);
+		return UPDATE_PLAN_FORM;
+	}
+
+	@PostMapping(value="/users/plan")
+	public String processUpdatePlanForm(@Valid User user, Map<String,Object> model, BindingResult br) {
+		if(br.hasErrors()) {
+			return VIEWS_OWNER_CREATE_FORM;
+		} else {
+			User loggedUser = userService.getLoggedUser().get();
+			loggedUser.setPlan(user.getPlan());
+			this.userService.saveUser(loggedUser);
 			return "redirect:/";
 		}
 	}
