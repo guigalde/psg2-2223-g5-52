@@ -43,11 +43,11 @@ In the retrospective meeting, the team has a discussion about those results.
 | D Day 7         |        -       |       -        |                |       -         |         -        |        -        |
 | L Day 8         |     :smiley:   |       -        |       -         |       -         |        -         |       -         |
 | M Day 9         |      -         |       -        |      -        |       -         |        -         |       -         |
-| X Day 10         |                |       😟      |  :smiley:     |     :smiley: |                  |           :smiley: |
+| X Day 10         |      -        |       😟      |  :smiley:     |     :smiley: |                  |           :smiley: |
 | J Day 11        |      -         |       -        |  -            |                 |        -         |       -         |
 | V Day 12        |      -         |                |     -        |        -        |        -         |       -         |
 | S Day 13        |     -          |       -        |  :smiley:      |        -        |    :smiley:      |       -         |
-| D Day 14        |                |       -        |               |        -       |                   |        -         |
+| D Day 14        |    -           |       -        |               |        -       |                   |        -         |
 | L Day 15        |      -         |       -        |   -            |       -        |          -        |                 |
 | M Day 16        |      -         |       😃       |                 |   :smiley:     |    :smiley:       |                |
 | X Day 17        |     :smiley:   |      😃        |  :neutral_face:|     :smiley:  |   :smiley:      |        :smiley:    |
@@ -55,10 +55,10 @@ In the retrospective meeting, the team has a discussion about those results.
 | V Day 19        |     :smiley:   |       😃        |   :smiley:        |   :smiley:    |     :smiley:     |     :smiley:  |
 | S Day 20        |     :worried:  |       -        |      -          |    :smiley:    |     :smiley:    |        -        |
 | D Day 21        |      :smiley:  |       -        |                 |          😐     |        -        |          -      |
-| L Day 22        |                |       -        |                |                 |         -       |       -         |
+| L Day 22        |      -         |       -        |                |                 |         -       |       -         |
 | M Day 23        |      -         |                |     :smiley:    |                 |                |       :smiley:  |    
 | X Day 24        |   :smiley:     |        -       |    :smiley:     |                |                |        -        |
-| J Day 25        |                |                |   -               |        -     |       -        |       -         |
+| J Day 25        |      -         |                |   -               |        -     |       -        |       -         |
 | V Day 26        |     -          |    -           |        -        |   -            |    -          |     -            |
 | S Day 27        |    -           |       -        |      -          |   -             |    -           |        -        |
 | D Day 28        |      -         |       -        |                 |    -           |        -        |          -      |
