@@ -22,6 +22,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.user.AuthoritiesService;
+import org.springframework.samples.petclinic.user.PricingPlan;
 import org.springframework.samples.petclinic.user.User;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.stereotype.Controller;
@@ -81,7 +82,9 @@ public class OwnerController {
 		}
 		else {
 			//creating owner, user and authorities
+			owner.getUser().setPlan(PricingPlan.BASIC);
 			this.ownerService.saveOwner(owner);
+			owner.getUser().setPlan(PricingPlan.BASIC);
 
 			return "redirect:/owners/" + owner.getId();
 		}
