@@ -35,7 +35,7 @@ In the retrospective meeting, the team has a discussion about those results.
 | Day             | Daniel         | Guillermo       | Juan Luis      | Jesús          | Pedro          | Pepe              |
 | -------------   | -------------  | ------------    | -------------  | -------------  | -------------  | -------------     |
 | L Day 1 (17/04) |    :smiley:    |       😐        |   :smiley:   |    :smiley:    |         -       |       :smiley:    |
-| M Day 2        |      -         |                |                 |                 |                |        -        |
+| M Day 2        |      -         |        -        |                 |                 |                |        -        |
 | X Day 3        |  :smiley:      |       😐          |   :smiley:     |      :smiley:  |     :smiley:     |    :smiley:    |
 | J Day 4         |      -         |      -         |       -         |       -         |       -         |        -        |
 | V Day 5         |       -        |       -        |       -         |       -         |        -        |        -        |
@@ -45,7 +45,7 @@ In the retrospective meeting, the team has a discussion about those results.
 | M Day 9         |      -         |       -        |      -        |       -         |        -         |       -         |
 | X Day 10         |      -        |       😟      |  :smiley:     |     :smiley: |                  |           :smiley: |
 | J Day 11        |      -         |       -        |  -            |                 |        -         |       -         |
-| V Day 12        |      -         |                |     -        |        -        |        -         |       -         |
+| V Day 12        |      -         |       -         |     -        |        -        |        -         |       -         |
 | S Day 13        |     -          |       -        |  :smiley:      |        -        |    :smiley:      |       -         |
 | D Day 14        |    -           |       -        |               |        -       |                   |        -         |
 | L Day 15        |      -         |       -        |   -            |       -        |          -        |                 |
@@ -56,12 +56,12 @@ In the retrospective meeting, the team has a discussion about those results.
 | S Day 20        |     :worried:  |       -        |      -          |    :smiley:    |     :smiley:    |        -        |
 | D Day 21        |      :smiley:  |       -        |                 |          😐     |        -        |          -      |
 | L Day 22        |      -         |       -        |                |                 |         -       |       -         |
-| M Day 23        |      -         |                |     :smiley:    |                 |                |       :smiley:  |    
-| X Day 24        |   :smiley:     |        -       |    :smiley:     |       😃         |                |        -        |
-| J Day 25        |      -         |                |   -               |        -     |       -        |       -         |
+| M Day 23        |      -         |        -        |     :smiley:    |                 |                |       :smiley:  |    
+| X Day 24        |   :smiley:     |        :smiley:       |    :smiley:     |       😃         |                |        -        |
+| J Day 25        |      -         |        -        |   -               |        -     |       -        |       -         |
 | V Day 26        |     -          |    -           |        -        |   -            |    -          |     -            |
 | S Day 27        |    -           |       -        |      -          |   😃             |    -           |        -        |
 | D Day 28        |      -         |       -        |                 |    -           |        -        |          -      |
 | L Day 29        |   😐           |       -        |                |                 |    :smiley:    |       -         |
-| M Day 30        |    :smiley:     |                |   -            |       😃          |    :smiley:    |     -           |
+| M Day 30        |    :smiley:     |     :smiley:           |   -            |       😃          |    :smiley:    |     -           |
 
