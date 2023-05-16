@@ -14,4 +14,10 @@ public class WelcomeController {
 
 	    return "welcome";
 	  }
+
+	  @GetMapping("/changelog")
+      public String changelog(Map<String, Object> model) {        
+
+        return "changelog/changelog-page";
+      }
 }
