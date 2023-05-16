@@ -54,14 +54,14 @@ In the retrospective meeting, the team has a discussion about those results.
 | J Day 18        |      -         |      -         |    :smiley:     |       -        |    -             |       -         |
 | V Day 19        |     :smiley:   |       😃        |   :smiley:        |   :smiley:    |     :smiley:     |     :smiley:  |
 | S Day 20        |     :worried:  |       -        |      -          |    :smiley:    |     :smiley:    |        -        |
-| D Day 21        |      -         |       -        |                 |          😐     |        -        |          -      |
+| D Day 21        |      :smiley:  |       -        |                 |          😐     |        -        |          -      |
 | L Day 22        |                |       -        |                |                 |         -       |       -         |
 | M Day 23        |      -         |                |     :smiley:    |                 |                |       :smiley:  |    
-| X Day 24        |                |        -       |    :smiley:     |                |                |        -        |
+| X Day 24        |   :smiley:     |        -       |    :smiley:     |                |                |        -        |
 | J Day 25        |                |                |   -               |        -     |       -        |       -         |
 | V Day 26        |     -          |    -           |        -        |   -            |    -          |     -            |
 | S Day 27        |    -           |       -        |      -          |   -             |    -           |        -        |
 | D Day 28        |      -         |       -        |                 |    -           |        -        |          -      |
-| L Day 29        |                |       -        |                |                 |         -       |       -         |
-| M Day 30        |      -         |                |   -            |                 |                |     -           |
+| L Day 29        |   😐           |       -        |                |                 |         -       |       -         |
+| M Day 30        |    :smiley:     |                |   -            |                 |                |     -           |
 
