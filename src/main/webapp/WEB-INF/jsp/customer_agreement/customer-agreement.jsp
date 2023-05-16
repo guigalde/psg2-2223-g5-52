@@ -80,11 +80,11 @@
                         <br>Gratis</br>
                     </td>
                     <td>
-                        <br>30.00 €/ año</br>
+                        <br>19.00 €/ mes</br>
                         <a href="#">Comprar ahora</a>
                     </td>
                     <td>
-                        <br>90.00 €/ año</br>
+                        <br>39.00 €/ mes</br>
                         <a href="#">Comprar ahora</a>
                     </td>
                 </tr>
