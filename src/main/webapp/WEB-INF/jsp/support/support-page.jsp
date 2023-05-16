@@ -31,7 +31,7 @@
             <h3>Pedro Jesús Ruiz Aguilar</h3>
             <h5>Web: <a href="https://pedruiagu1.com">pedruiagu1.com</a></h5>
             <h5>E-mail: <a href="mailto:cocode2002@gmail.com">pedruiagu1@gmail.com</a></h5>
-            <h5>Tel: +34 3679170290</h5>
+            <h5>Tel: +34 3679170190</h5>
         </div>
         <div class="xd-container">
             <h3>José Manuel Ruiz Pérez</h3>
