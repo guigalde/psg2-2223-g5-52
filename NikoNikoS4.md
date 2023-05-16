@@ -57,11 +57,11 @@ In the retrospective meeting, the team has a discussion about those results.
 | D Day 21        |      :smiley:  |       -        |                 |          😐     |        -        |          -      |
 | L Day 22        |      -         |       -        |                |                 |         -       |       -         |
 | M Day 23        |      -         |        -        |     :smiley:    |                 |                |       :smiley:  |    
-| X Day 24        |   :smiley:     |        :smiley:       |    :smiley:     |       😃         |                |        -        |
+| X Day 24        |   :smiley:     |     :smiley:    |    :smiley:     |       😃         |                |        -        |
 | J Day 25        |      -         |        -        |   -               |        -     |       -        |       -         |
 | V Day 26        |     -          |    -           |        -        |   -            |    -          |     -            |
 | S Day 27        |    -           |       -        |      -          |   😃             |    -           |        -        |
-| D Day 28        |      -         |       -        |                 |    -           |        -        |          -      |
-| L Day 29        |   😐           |       -        |                |                 |    :smiley:    |       -         |
-| M Day 30        |    :smiley:     |     :smiley:           |   -            |       😃          |    :smiley:    |     -           |
+| D Day 28        |      -         |       -        |      :smiley:     |    -           |        -        |          -      |
+| L Day 29        |   😐           |       -        |     :smiley:      |                 |    :smiley:    |       -         |
+| M Day 30        |    :smiley:     |     :smiley:    |   :smiley:      |       😃          |    :smiley:    |     -           |
 
