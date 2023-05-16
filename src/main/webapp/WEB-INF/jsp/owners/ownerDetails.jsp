@@ -28,6 +28,17 @@
             <th><fmt:message key="telephone"/></th>
             <td><c:out value="${owner.telephone}"/></td>
         </tr>
+        <tr>
+            <c:if test="${owner.user.plan eq 'PRO'}">
+                <th>Recibir información meteorológica via SMS</th>
+                <td><input type="checkbox" name="" vaue=""></td>
+            </c:if>
+            
+
+            <th>Plan</th>
+            <td><c:out value ="${owner.user.plan}"/></td>
+
+        </tr>
     </table>
 
     <spring:url value="{ownerId}/edit" var="editUrl">
@@ -70,6 +81,14 @@
                             <th><fmt:message key="visitDate"/></th>
                             <th><fmt:message key="description"/></th>
                             <th><fmt:message key="delete"/></th>
+                            <c:if test="${owner.user.plan eq 'PRO'}">
+                                <th>Notificación por SMS</th>
+                                <td><input type="checkbox" name="" vaue=""></td>
+                            </c:if>
+                            <c:if test="${owner.user.plan eq 'ADVANCED'}">
+                                <th>Notificación por SMS</th>
+                                <td><input type="checkbox" name="" vaue=""></td>
+                            </c:if>
                         </tr>
                         </thead>
                         <c:forEach var="visit" items="${pet.visits}">
@@ -81,6 +100,12 @@
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </a>
                                 </td>
+                                <c:if test="${owner.user.plan eq 'ADVANCED'}">
+                                    <td><input type="checkbox" name="" vaue=""></td>
+                                </c:if>
+                                <c:if test="${owner.user.plan eq 'PRO'}">
+                                    <td><input type="checkbox" name="" vaue=""></td>
+                                </c:if>
                             </tr>
                         </c:forEach>
                         <tr>
@@ -99,6 +124,7 @@
                                 <a href="${fn:escapeXml(visitUrl)}"><fmt:message key="addVisit"/></a>
                             </td>
                             <td valign="top">
+                                <c:if test="${owner.user.plan eq 'PRO'}">
                                 <td>
                                     <spring:url value="/owners/{ownerId}/pets/{petId}/booking/new" var="visitUrl">
                                         <spring:param name="ownerId" value="${owner.id}"/>
@@ -106,6 +132,16 @@
                                     </spring:url>
                                     <a class="btn btn-default" href="${fn:escapeXml(visitUrl)}"><fmt:message key="addBooking"/></a> 
                                 </td>
+                                </c:if>
+                                <c:if test="${owner.user.plan eq 'ADVANCED'}">
+                                <td>
+                                    <spring:url value="/owners/{ownerId}/pets/{petId}/booking/new" var="visitUrl">
+                                        <spring:param name="ownerId" value="${owner.id}"/>
+                                        <spring:param name="petId" value="${pet.id}"/>
+                                    </spring:url>
+                                    <a class="btn btn-default" href="${fn:escapeXml(visitUrl)}"><fmt:message key="addBooking"/></a> 
+                                </td>
+                                </c:if>
                                 <c:if test="${loggedOwner.id == owner.id}">
                                 <td>
                                     <spring:url value="/owners/{ownerId}/pets/{petId}/adoption/new" var="adoptionUrl">
@@ -124,6 +160,7 @@
         </c:forEach>
     </table>
 
+<c:if test="${owner.user.plan eq 'PRO'}">
     <h2><fmt:message key="bookings"/></h2>
 
     <table class="table table-striped">
@@ -148,5 +185,33 @@
 
         </c:forEach>
     </table>
+</c:if>
+
+<c:if test="${owner.user.plan eq 'ADVANCED'}">
+    <h2><fmt:message key="bookings"/></h2>
+
+    <table class="table table-striped">
+        <c:forEach var="booking" items="${owner.bookings}">
+
+            <tr>
+                <td valign="top">
+                    <dl class="dl-horizontal">
+                        <dt><fmt:message key="petName"/></dt>
+                        <dd><c:out value="${booking.pet.name}"/></dd>
+                        <dt><fmt:message key="startDate"/></dt>
+                        <dd><petclinic:localDate date="${booking.startDate}" pattern="yyyy-MM-dd"/></dd>
+                        <dt><fmt:message key="finishDate"/></dt>
+                        <dd><petclinic:localDate date="${booking.finishDate}" pattern="yyyy-MM-dd"/></dd>
+                        <dd><a href="/owners/${owner.id}/pets/${booking.pet.id}/booking/${booking.id}/delete">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a></dd>
+                    </dl>
+                </td>
+                
+            </tr>
+
+        </c:forEach>
+    </table>
+</c:if>
 
 </petclinic:layout>

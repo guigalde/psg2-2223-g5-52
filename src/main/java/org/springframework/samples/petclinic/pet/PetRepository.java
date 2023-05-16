@@ -15,11 +15,14 @@
  */
 package org.springframework.samples.petclinic.pet;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.samples.petclinic.user.PricingPlan;
 
 /**
  * Spring Data JPA specialization of the {@link PetRepository} interface
@@ -44,6 +47,25 @@ public interface PetRepository extends CrudRepository<Pet, Integer> {
 	 */
 	Pet findById(int id) throws DataAccessException;
 
+	@Query("SELECT p FROM Pet p WHERE p.owner.id = :id")
+	List<Pet> findByOwnerId(@Param("id") int id);
 
+	@Query("SELECT p FROM PetType p WHERE p.name = :name")
+	PetType findByName(@Param("name") String name);
 
+	default List<PetType> findPetTypesForPlan(PricingPlan plan) {
+		List<PetType> pets = new ArrayList<>();
+		if(plan.getName().equals("BASIC")) {
+			pets.add(findByName("dog"));
+			pets.add(findByName("cat"));
+		} else if(plan.getName().equals("ADVANCED")) {
+			pets.add(findByName("dog"));
+			pets.add(findByName("cat"));
+			pets.add(findByName("bird"));
+			pets.add(findByName("hamster"));
+		} else {
+			pets = findPetTypes();
+		}
+		return pets;
+	}
 }

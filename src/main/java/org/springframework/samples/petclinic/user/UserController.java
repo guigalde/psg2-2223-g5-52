@@ -15,10 +15,13 @@
  */
 package org.springframework.samples.petclinic.user;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
+import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerService;
@@ -28,6 +31,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Juergen Hoeller
@@ -39,12 +43,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class UserController {
 
 	private static final String VIEWS_OWNER_CREATE_FORM = "users/createOwnerForm";
-
+	private static final String UPDATE_PLAN_FORM = "users/updatePlanForm";
+	private static final String PROFILE_VIEW = "users/userProfile";
 	private final OwnerService ownerService;
+	private final UserService userService;
 
 	@Autowired
-	public UserController(OwnerService clinicService) {
+	public UserController(OwnerService clinicService,  UserService userService) {
 		this.ownerService = clinicService;
+		this.userService = userService;
 	}
 
 	@InitBinder
@@ -66,9 +73,49 @@ public class UserController {
 		}
 		else {
 			//creating owner, user, and authority
+			owner.getUser().setPlan(PricingPlan.BASIC);
 			this.ownerService.saveOwner(owner);
+			owner.getUser().setPlan(PricingPlan.BASIC);
 			return "redirect:/";
 		}
+	}
+
+	@GetMapping(value = "/users/plan")
+	public String getUpdatePlanForm(Map<String, Object> model) {
+		List<PricingPlan> plans = List.of(PricingPlan.BASIC,PricingPlan.ADVANCED,PricingPlan.PRO);
+		Optional<User> loggedUser = userService.getLoggedUser();
+		model.put("loggedUser", loggedUser.get());
+		model.put("plans", plans);
+		return UPDATE_PLAN_FORM;
+	}
+
+	@PostMapping(value="/users/plan")
+	public ModelAndView processUpdatePlanForm(@Valid User user, BindingResult br) {
+		if(br.hasErrors()) {
+			ModelAndView model = new ModelAndView(UPDATE_PLAN_FORM, br.getModel());
+			List<PricingPlan> plans = List.of(PricingPlan.BASIC,PricingPlan.ADVANCED,PricingPlan.PRO);
+			Optional<User> loggedUser = userService.getLoggedUser();
+			model.addObject("loggedUser", loggedUser.get());
+			model.addObject("plans", plans);
+			return model;
+		} else {
+			User loggedUser = userService.getLoggedUser().get();
+			loggedUser.setPlan(user.getPlan());
+			this.userService.saveUser(loggedUser);
+			return new ModelAndView("redirect:/");
+		}
+	}
+
+	@GetMapping(value = "/users/profile")
+	public String getUserProfile(Map<String, Object> model) {
+		List<PricingPlan> plans = List.of(PricingPlan.BASIC,PricingPlan.ADVANCED,PricingPlan.PRO);
+		Optional<User> optUser = userService.getLoggedUser();
+		User loggedUser = optUser.get();
+		Owner loggedOwner = ownerService.findOwnerByUsername(loggedUser.getUsername());
+		model.put("loggedUser", loggedUser);
+		model.put("loggedOwner", loggedOwner);
+		model.put("plans", plans);
+		return PROFILE_VIEW;
 	}
 
 }

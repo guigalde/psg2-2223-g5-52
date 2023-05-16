@@ -39,7 +39,17 @@
                 <petclinic:inputField label="Date" name="date"/>
                 <petclinic:inputField label="Description" name="description"/>
             </div>
-
+            <c:if test="${visit.pet.owner.user.plan eq 'ADVANCED'}">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="checkbox" name="Notificación por SMS" value="">Recibe notificaciones por SMS<BR>
+                </div>
+            </c:if>
+            <c:if test="${visit.pet.owner.user.plan eq 'PRO'}">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="checkbox" name="Notificación por SMS" value="">Recibe notificaciones por SMS<BR>
+                </div>
+            </c:if>
+            
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="hidden" name="petId" value="${visit.pet.id}"/>

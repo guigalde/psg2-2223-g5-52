@@ -19,50 +19,117 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
+			<c:if test="${currentUserPlan eq 'BASIC'}">
+				<span style="font-size: 70px; color: brown; font-style: italic;">${currentUserPlan}</span>
+			</c:if>
+			<c:if test="${currentUserPlan eq 'ADVANCED'}">
+				<span style="font-size: 70px; color: #ADD8E6; font-style: italic;">${currentUserPlan}</span>
+			</c:if>
+			<c:if test="${currentUserPlan eq 'PRO'}">
+				<span style="font-size: 100px; color: #FFBF00; font-style: italic;">${currentUserPlan}</span>
+			</c:if>
 		</div>
 		<div class="navbar-collapse collapse" id="main-navbar">
 			<ul class="nav navbar-nav">
 
+				
+
 				<petclinic:menuItem active="${name eq 'home'}" url="/"
 					title="home page">
-					<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+					<c:if test="${currentUserPlan eq 'BASIC'}">
+						<span class="glyphicon glyphicon-home" aria-hidden="true" style="color: brown;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'ADVANCED'}">
+						<span class="glyphicon glyphicon-home" aria-hidden="true" style="color: #ADD8E6;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'PRO'}">
+						<span class="glyphicon glyphicon-home" aria-hidden="true" style="color: #FFBF00;"></span>
+					</c:if>
 					<span><fmt:message key="home"/></span>
 				</petclinic:menuItem>
 
 				<petclinic:menuItem active="${name eq 'owners'}" url="/owners/find"
 					title="find owners">
-					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					<c:if test="${currentUserPlan eq 'BASIC'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: brown;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'ADVANCED'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: #ADD8E6;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'PRO'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: #FFBF00;"></span>
+					</c:if>
 					<span><fmt:message key="findOwners"/></span>
 				</petclinic:menuItem>
 
 				<petclinic:menuItem active="${name eq 'vets'}" url="/vets"
 					title="veterinarians">
-					<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+					<c:if test="${currentUserPlan eq 'BASIC'}">
+						<span class="glyphicon glyphicon-th-list" aria-hidden="true" style="color: brown;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'ADVANCED'}">
+						<span class="glyphicon glyphicon-th-list" aria-hidden="true" style="color: #ADD8E6;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'PRO'}">
+						<span class="glyphicon glyphicon-th-list" aria-hidden="true" style="color: #FFBF00;"></span>
+					</c:if>
 					<span><fmt:message key="veterinarians"/></span>
 				</petclinic:menuItem>
 
-				<petclinic:menuItem active="${name eq 'Causas'}" url="/cause"
+				<petclinic:menuItem active="${name eq 'causes'}" url="/cause"
 					title="causes">
-					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					<c:if test="${currentUserPlan eq 'BASIC'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: brown;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'ADVANCED'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: #ADD8E6;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'PRO'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: #FFBF00;"></span>
+					</c:if>
 					<span><fmt:message key="causes"/></span>
 				</petclinic:menuItem>
 
 				<petclinic:menuItem active="${name eq 'error'}" url="/oups"
 					title="trigger a RuntimeException to see how it is handled">
-					<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+					<c:if test="${currentUserPlan eq 'BASIC'}">
+						<span class="glyphicon glyphicon-warning-sign" aria-hidden="true" style="color: brown;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'ADVANCED'}">
+						<span class="glyphicon glyphicon-warning-sign" aria-hidden="true" style="color: #ADD8E6;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'PRO'}">
+						<span class="glyphicon glyphicon-warning-sign" aria-hidden="true" style="color: #FFBF00;"></span>
+					</c:if>
 					<span><fmt:message key="errorLabel"/></span>
 				</petclinic:menuItem>		
 				
 
 				<petclinic:menuItem active="${name eq 'adoptions'}" url="/adoptions/find"
 					title="adoptions">
-					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					<c:if test="${currentUserPlan eq 'BASIC'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: brown;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'ADVANCED'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: #ADD8E6;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'PRO'}">
+						<span class="glyphicon glyphicon-search" aria-hidden="true" style="color: #FFBF00;"></span>
+					</c:if>
 					<span><fmt:message key="adoptions"/></span>
 				</petclinic:menuItem>
 
 				<petclinic:menuItem active="${name eq 'customer-agreement'}" url="/customer-agreement"
 					title="customer-agreement">
-					<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+					<c:if test="${currentUserPlan eq 'BASIC'}">
+						<span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="color: brown;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'ADVANCED'}">
+						<span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="color: #ADD8E6;"></span>
+					</c:if>
+					<c:if test="${currentUserPlan eq 'PRO'}">
+						<span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="color: #FFBF00;"></span>
+					</c:if>
 					<span><fmt:message key="customer-agreement"/></span>
 				</petclinic:menuItem>
 
@@ -77,10 +144,13 @@
 					<li><a href="<c:url value="/users/new" />"><fmt:message key="register"/></a></li>
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span>�
-							<strong><sec:authentication property="name" /></strong> <span
-							class="glyphicon glyphicon-chevron-down"></span>
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<strong><sec:authentication property="name" /></strong> 
+							<span class="glyphicon glyphicon-user icon-size"></span>
+							<strong><c:out value="${currentUserPlan.name}"/></strong> 
+							<span class="glyphicon glyphicon-chevron-down"></span>
+
 					</a>
 						<ul class="dropdown-menu">
 							<li>
@@ -98,6 +168,14 @@
 											<p class="text-left">
 												<a href="<c:url value="/logout" />"
 													class="btn btn-primary btn-block btn-sm"><fmt:message key="logout"/></a>
+											</p>
+											<p class="text-left">
+												<a href="<c:url value="/users/plan" />" 
+												class="btn btn-primary btn-block btn-sm">Planes</a>
+											</p>
+											<p class="text-left">
+												<a href="<c:url value="/users/profile" />" 
+												class="btn btn-primary btn-block btn-sm">Perfil</a>
 											</p>
 										</div>
 									</div>
