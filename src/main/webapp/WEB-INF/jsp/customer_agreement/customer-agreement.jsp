@@ -80,12 +80,13 @@
                         <br>Gratis</br>
                     </td>
                     <td>
-                        <br>30.00 €/ año</br>
-                        <a href="<c:url value='/users/plan'/>">Comprar ahora</a>
+                        <br>19.00 €/ mes</br>
+                        <a href="#">Comprar ahora</a>
                     </td>
                     <td>
-                        <br>90.00 €/ año</br>
-                        <a href="<c:url value='/users/plan'/>">Comprar ahora</a>
+                        <br>39.00 €/ mes</br>
+                        <a href="#">Comprar ahora</a>
+
                     </td>
                 </tr>
                 <tr>
